@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en" class="sos-root">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SlaapOnderSterren</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap-grid.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <svg class="clip-svg">
+      <clipPath id="cloud-path" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0,0.312 S0.042,-0.007,0.077,0.41 c0,0,0.053,-0.639,0.096,0.107 c0,0,0.042,-0.361,0.073,-0.012 c0,0,0.05,-1.061,0.113,-0.102 c0,0,0.059,-0.49,0.097,0.129 c0,0,0.069,-1.055,0.139,0.154 c0,0,0.042,-0.624,0.087,-0.154 c0,0,0.034,-0.922,0.1,-0.226 c0,0,0.054,-0.313,0.084,0.191 c0,0,0.038,-0.344,0.086,0.081 c0,0,0.025,-0.257,0.048,-0.078 l0,0.502 H0 V0.312"
+        />
+      </clipPath>
+    </svg>
+
+    <svg class="clip-svg">
+      <clipPath id="curvy-path" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0,0.011 v1 h1 V0.011 S0.443,0.64,0.336,0.64 S0,0.011,0,0.011"
+        ></path>
+      </clipPath>
+    </svg>
+
+    <svg class="clip-svg">
+      <clipPath id="overlapping-clouds" clipPathUnits="objectBoundingBox"><path d="M0,0.306 v-0.306 h1 c0,0,0,0.784,0,0.784 c-0.004,0.013,-0.008,0.022,-0.013,0.022 c-0.011,0,-0.022,-0.039,-0.03,-0.104 c-0.009,0.114,-0.023,0.185,-0.039,0.185 c-0.011,0,-0.022,-0.039,-0.03,-0.104 c-0.005,0.066,-0.012,0.11,-0.021,0.11 c-0.014,0,-0.025,-0.117,-0.025,-0.262 c0,-0.01,0,-0.021,0,-0.031 c-0.003,0.018,-0.007,0.028,-0.011,0.028 c-0.003,0,-0.007,-0.007,-0.01,-0.019 c-0.007,0.209,-0.026,0.36,-0.048,0.36 c-0.021,0,-0.039,-0.131,-0.046,-0.318 c-0.008,0.048,-0.016,0.075,-0.026,0.075 c-0.013,0,-0.025,-0.054,-0.034,-0.141 c-0.005,0.238,-0.025,0.416,-0.049,0.416 c-0.02,0,-0.037,-0.122,-0.046,-0.299 c-0.014,0.142,-0.034,0.229,-0.055,0.229 c-0.027,0,-0.05,-0.137,-0.065,-0.346 c-0.006,0.239,-0.027,0.417,-0.052,0.417 c-0.022,0,-0.042,-0.143,-0.05,-0.346 c-0.009,0.065,-0.019,0.103,-0.031,0.103 c-0.01,0,-0.019,-0.026,-0.027,-0.073 c-0.009,0.187,-0.027,0.316,-0.048,0.316 c-0.022,0,-0.041,-0.138,-0.049,-0.335 c-0.008,0.058,-0.019,0.091,-0.029,0.091 c-0.013,0,-0.024,-0.045,-0.033,-0.122 c-0.009,0.169,-0.027,0.284,-0.047,0.284 c-0.02,0,-0.037,-0.11,-0.046,-0.275 c-0.005,0.056,-0.011,0.091,-0.019,0.091 c-0.008,0,-0.02,-0.022,-0.02,-0.097 v-0.331,NaN E%3, C0 p, a0 t0 h0 d=', M1,0.306 v-0.306 h-1 c0,0,0,0.784,0,0.784 c0.004,0.013,0.008,0.022,0.013,0.022 c0.011,0,0.022,-0.039,0.03,-0.104 c0.009,0.114,0.023,0.185,0.039,0.185 c0.011,0,0.022,-0.039,0.03,-0.104 c0.005,0.066,0.012,0.11,0.021,0.11 c0.014,0,0.025,-0.117,0.025,-0.262 c0,-0.01,0,-0.021,0,-0.031 c0.003,0.018,0.007,0.028,0.011,0.028 c0.003,0,0.007,-0.007,0.01,-0.019 c0.007,0.209,0.026,0.36,0.048,0.36 c0.021,0,0.039,-0.131,0.046,-0.318 c0.008,0.048,0.016,0.075,0.026,0.075 c0.013,0,0.025,-0.054,0.034,-0.141 c0.005,0.238,0.025,0.416,0.049,0.416 c0.02,0,0.037,-0.122,0.046,-0.299 c0.014,0.142,0.034,0.229,0.055,0.229 c0.027,0,0.05,-0.137,0.065,-0.346 c0.006,0.239,0.027,0.417,0.052,0.417 c0.022,0,0.042,-0.143,0.05,-0.346 c0.009,0.065,0.019,0.103,0.031,0.103 c0.01,0,0.019,-0.026,0.027,-0.073 c0.009,0.187,0.027,0.316,0.048,0.316 c0.022,0,0.041,-0.138,0.049,-0.335 c0.008,0.058,0.019,0.091,0.029,0.091 c0.013,0,0.024,-0.045,0.033,-0.122 c0.009,0.169,0.027,0.284,0.047,0.284 c0.02,0,0.037,-0.11,0.046,-0.275 c0.005,0.056,0.011,0.091,0.019,0.091 c0.008,0,0.02,-0.022,0.02,-0.097 v-0.331"></path></clipPath>
+    </svg>
+
+    <svg id="stars" style="display: none" version="1.1">
+      <symbol id="stars-full-star" viewBox="0 0 102 18">
+        <path
+          d="M9.5 14.25l-5.584 2.936 1.066-6.218L.465 6.564l6.243-.907L9.5 0l2.792 5.657 6.243.907-4.517 4.404 1.066 6.218"
+        />
+      </symbol>
+
+      <symbol id="stars-half-star" viewBox="0 0 102 18">
+        <path
+          d="M9.5 14.25l-5.584 2.936 1.066-6.218L.465 6.564l6.243-.907L9.5 0l2.792"
+          style="fill: var(--starRatingColor);"
+        />
+      </symbol>
+
+      <symbol id="stars-all-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-full-star" />
+        <use xlink:href="#stars-full-star" transform="translate(21)" />
+        <use xlink:href="#stars-full-star" transform="translate(42)" />
+        <use xlink:href="#stars-full-star" transform="translate(63)" />
+        <use xlink:href="#stars-full-star" transform="translate(84)" />
+      </symbol>
+
+      <symbol id="stars-0-0-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-all-star" style="fill: var(--starRatingGrey);" />
+      </symbol>
+
+      <symbol id="stars-0-5-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-0-0-star" />
+        <use xlink:href="#stars-half-star" />
+      </symbol>
+
+      <symbol id="stars-1-0-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-0-0-star" />
+        <use xlink:href="#stars-full-star" style="fill: var(--starRatingColor);" />
+      </symbol>
+
+      <symbol id="stars-1-5-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-1-0-star" />
+        <use xlink:href="#stars-half-star" transform="translate(21)" />
+      </symbol>
+
+      <symbol id="stars-2-0-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-1-0-star" />
+        <use
+          xlink:href="#stars-full-star"
+          style="fill: var(--starRatingColor);"
+          transform="translate(21)"
+        />
+      </symbol>
+
+      <symbol id="stars-2-5-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-2-0-star" />
+        <use xlink:href="#stars-half-star" transform="translate(42)" />
+      </symbol>
+
+      <symbol id="stars-3-0-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-2-0-star" />
+        <use
+          xlink:href="#stars-full-star"
+          style="fill: var(--starRatingColor);"
+          transform="translate(42)"
+        />
+      </symbol>
+
+      <symbol id="stars-3-5-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-3-0-star" />
+        <use xlink:href="#stars-half-star" transform="translate(63)" />
+      </symbol>
+
+      <symbol id="stars-4-0-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-3-0-star" />
+        <use
+          xlink:href="#stars-full-star"
+          style="fill: var(--starRatingColor);"
+          transform="translate(63)"
+        />
+      </symbol>
+
+      <symbol id="stars-4-5-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-4-0-star" />
+        <use xlink:href="#stars-half-star" transform="translate(84)" />
+      </symbol>
+
+      <symbol id="stars-5-0-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-all-star" style="fill: var(--starRatingColor);" />
+      </symbol>
+    </svg>
+
+    <div class="page-wrap">
+      <header id="top-header">
+        <div class="container">
+          <div class="row top-header-row">
+            <div class="col top-logo">
+              <a href="#">
+                <img src="./images/LOGO.webp" alt="" />
+              </a>
+            </div>
+            <nav class="col top-nav">
+              <ul>
+                <li><a href="#">Over ons</a></li>
+                <li class="has-children">
+                  <a href="#">Our Products</a>
+                  <ul>
+                    <li><a href="#">Werking</a></li>
+                    <li><a href="#">Voor Baby's & Kinderen</a></li>
+                    <li><a href="#">Voor Volwassenen</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Droomshop</a></li>
+                <li class="has-children">
+                  <a href="#">Contact</a>
+                  <ul>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Bericht ons</a></li>
+                  </ul>
+                </li>
+                <li class="mobile-only mobile-store-cta button-importent">
+                  <a
+                    href="#"
+                    class=""
+                    >Store</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <div class="col top-cta">
+              <button class="mobile-only mobile-nav-toggle">
+                <i class="fa fa-bars"></i>
+              </button>
+              <a
+                href="#"
+                class="button button-primary button-shadow button-small desktop-only button-importent"
+                >Store</a
+              >
+            </div>
+          </div>
+        </div>
+        <div id="progress-bar">
+          <i class="fa fa-star" id="progress-bar-icon"></i>
+        </div>
+      </header>
+
+      <div id="single-product-hero" style="background-image: url(./images/single-page-slider.jpg)">
+        <div class="container">
+          <div class="single-product-hero-copy">
+            <h1 class="text-white single-product-hero-title mb2">
+              Numsy MilkyWay
+            </h1>
+            <div class="text-big text-white single-product-hero-subtitle mb3 auto-type">
+              <div class="text-js">
+                Op een leuke en interactieve manier naar bed
+              </div>
+            </div>
+            <!-- <p class="hero-cta">
+              <a
+                href="#"
+                class="button button-primary button-rounded button-big button-icon"
+                >Start hier <i class="fa fa-sign-out"></i></a
+              >
+            </p> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="product-intro-section cloudy-section">
+        <!-- <div class="section-divider-top divider-section"></div> -->
+        <div class="cloud-area"></div>
+        <div class="container">
+          <div class="row pb-5">
+            <div class="col-md-7 product-name">
+              <h2 class="h2 title-secondary mt-4 mb-0 color-green title">Numsy MilkyWay White</h2>
+              <h4 class="h3 title-secondary product-category title">Uitverkocht</h4>
+              <p class="product-description">
+                Droom weg onder een adembenemende sterrenhemel met de Numsy MilkyWay. Heeft het universum ook altijd al een verwonderde, maar rustgevende invloed op je gehad? Dan is de Numsy Milky Way uitermate geschikt voor jou. Dankzij de unieke combinatie van witte ruis en deze projectie zul jij je eindelijk eens afgesloten van de drukke buitenwereld voelen. Tijd om weer van je rust te genieten!
+              </p>
+              <p class="buy-btn">
+                <a href="#" class="button button-primary text-black  button-rounded button-big button-icon mt-4"> Bestel MilkyWay White  <i class="fa button-inserted-icon fa-shopping-cart fr-deletable"></i></a>
+              </p>
+              <p>
+                <div class="product-review">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </p>
+            </div>
+            <div class="col-md-5 product-image">
+              <img src="./images/SINGLE-PAGE-PRODUCT-1.jpeg" alt="" class="mt4" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-intro-section second-verity">
+        <div class="container">
+          <div class="row pb-5">
+            <div class="col-md-7 product-name">
+              <h2 class="h2 title-secondary mt-4 mb-0 color-green title">Numsy MilkyWay Black</h2>
+              <h4 class="h3 title-secondary product-category title">49,-</h4>
+              <p class="product-description">
+                Droom weg onder een adembenemende sterrenhemel met de Numsy MilkyWay. Heeft het universum ook altijd al een verwonderde, maar rustgevende invloed op je gehad? Dan is de Numsy Milky Way uitermate geschikt voor jou. Dankzij de unieke combinatie van witte ruis en deze projectie zul jij je eindelijk eens afgesloten van de drukke buitenwereld voelen. Tijd om weer van je rust te genieten!
+              </p>
+              <p class="buy-btn">
+                <a href="#" class="button button-primary text-black  button-rounded button-big button-icon mt-4"> Bestel MilkyWay Black  <i class="fa button-inserted-icon fa-shopping-cart fr-deletable"></i></a>
+              </p>
+              <p>
+                <div class="product-review">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </p>
+            </div>
+            <div class="col-md-5 product-image">
+              <img src="./images/SINGLE-PAGE-PRODUCT-2.jpeg" alt="" class="mt4" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dream-shop single-product-dream-shop">
+        <div class="container dream-shop-single-product-inner">
+          <div class="row delivery-boxes single-product-boxes">
+
+            <div class="col-md-4">
+              <div class="delivery-box">
+                <span class="delivery-box-icon delivery-box-icon-1">
+                  <img src="./images/single-box-1.png" alt="">
+                </span>
+                <div class="delivery-box-right">
+                  <p class="h3 mt-0 mb-3 text-brand">Witte ruis en meer</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="delivery-box">
+                <span class="delivery-box-icon delivery-box-icon-2">
+                  <img src="./images/single-box-2.png" alt="">
+                </span>
+                <div class="delivery-box-right">
+                  <p class="h3 mt-0 mb-3 text-brand">28 Natuurlijke geluiden</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="delivery-box">
+                <span class="delivery-box-icon delivery-box-icon-3">
+                  <img src="./images/single-box-3.webp" alt="">
+                </span>
+                <div class="delivery-box-right">
+                  <p class="h3 mt-0 mb-3 text-brand">3 Kappen voor sterren projectie</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="delivery-box">
+                <span class="delivery-box-icon delivery-box-icon-1">
+                  <img src="./images/single-box-4.png" alt="">
+                </span>
+                <div class="delivery-box-right">
+                  <p class="h3 mt-0 mb-3 text-brand">3.5mm AUX poort</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="delivery-box">
+                <span class="delivery-box-icon delivery-box-icon-2">
+                  <img src="./images/single-box-5.png" alt="">
+                </span>
+                <div class="delivery-box-right">
+                  <p class="h3 mt-0 mb-3 text-brand">Timer 30/60/90 min afspelen</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="delivery-box">
+                <span class="delivery-box-icon delivery-box-icon-3">
+                  <img src="./images/single-box-6.png" alt="">
+                </span>
+                <div class="delivery-box-right">
+                  <p class="h3 mt-0 mb-3 text-brand">Interactief</p>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+
+      <div id="additional-detail-section">
+        <div class="container">
+          <div class="row product-deep-detail-row">
+            <div class="col-md-9">
+              <div class="single-page-info">
+
+                <h2 class="title-secondary">De sterren zijn dichterbij dan je denkt</h2>
+                <p>
+                  Geniet van een sterrenhemel in je eigen paleisje. Je slaapkamer. Met deze sterrenprojector van Numsy tover je jouw kamer zo om tot een ware melkweg. Verwonder je voor het slapengaan nog even lekker over het universum en de sterrenhemel, voordat je in een heerlijke diepe slaap valt en de nieuwe dag alweer bijna begint.
+                </p>
+
+                <h3>Slaap beter, ontspan beter, werk beter</h3>
+                <p>
+                  Maak gebruik van een van de 28 verschillende geluiden. Dankzij de grote variëteit aan geluiden is er voor elk moment wel een geschikte sound te vinden. Gebruik bijvoorbeeld een van de natuurgeluiden om lekker tot rust te komen in bad. Of maak gebruik van witte ruis om heerlijk in slaap te vallen.
+                </p>
+                <h3>Wist je dat?</h3>
+                <p>
+                  Pasgeborene vallen sneller in slaap met white noise! Het suizende geluid doet ze denken aan het suizen van bloed door de baarmoeder. Dit geeft jouw kindje een vertrouwd en veilig gevoel.
+                </p>
+                <h3>Naar wens aan te passen</h3>
+                <p>
+                  Verander jouw Numsy Milkyway volledig naar wens. Om je nog meer van dat vertrouwde thuisgevoel te laten genieten kun jij jouw sterrenprojector helemaal naar wens aanpassen. Zo kies je zelf de kleur en de intensiteit van het licht. Omdat jouw MilkyWay gemakkelijk te verplaatsen is kun je hem ook nog voor verschillende doeleinden inzetten. Heb je wel genoeg sterren gezien je slaapkamer? Je kunt de MilkyWay ook inzetten als discolamp!
+                </p>
+
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="product-cover-detail-photo">
+                <img src="./images/SD-1.jpg" alt="">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        
+        <div class="row gallery single-product-gallery" id="mfp-gallery"> 
+		
+          <!-- <div class="col-lg-3 col-md-6 thumb" >
+            <a href="./images/PG-1.webp" class="single-product-image">
+              <figure><img class="img-fluid img-thumbnail" src="./images/PG-1.webp" alt="Random Image"></figure>
+            </a>
+          </div>
+      
+          <div class="col-lg-3 col-md-6 thumb">
+            <a href="./images/PG-2.webp" class="single-product-image">
+              <figure><img class="img-fluid img-thumbnail" src="./images/PG-2.webp" alt="Random Image"></figure>
+            </a>
+          </div>
+      
+          <div class="col-lg-3 col-md-6 thumb">
+            <a href="./images/PG-3.webp" class="single-product-image">
+              <figure><img class="img-fluid img-thumbnail" src="./images/PG-3.webp" alt="Random Image"></figure>
+            </a>
+          </div>
+      
+          <div class="col-lg-3 col-md-6 thumb">
+            <a href="./images/PG-4.webp" class="single-product-image">
+              <figure><img class="img-fluid img-thumbnail" src="./images/PG-4.webp" alt="Random Image"></figure>
+            </a>
+          </div> -->
+      
+          
+            <a class="example-image-link col-lg-3 col-md-6 mb-5" href="./images/PG-1.webp" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="img-fluid example-image" src="./images/PG-1.webp" alt=""/></a>
+            <a class="example-image-link col-lg-3 col-md-6 mb-5" href="./images/PG-2.webp" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."><img class="img-fluid example-image" src="./images/PG-2.webp" alt="" /></a>
+            <a class="example-image-link col-lg-3 col-md-6 mb-5" href="./images/PG-3.webp" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing."><img class="img-fluid example-image" src="./images/PG-3.webp" alt="" /></a>
+            <a class="example-image-link col-lg-3 col-md-6 mb-5" href="./images/PG-4.webp" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close."><img class="img-fluid example-image" src="./images/PG-4.webp" alt="" /></a>
+         
+
+        </div>
+
+        <div class="container">
+          <div class="row delivery-boxes detail-delivery-boxes">
+            <div class="col-md-6 col-lg-4">
+              <div class="delivery-box detail-delivery-box">
+                <span class="delivery-box-icon detail-delivery-box-icon-1">
+                  <img src="./images/D-7.png" alt="">
+                </span>
+                <div class="delivery-box-right detail-delivery-box-right">
+                  <p class="h3 mt-0 mb-3 text-brand">Snelle levering </p>
+                  <p class="copy">Voor 22:00 besteld is volgende dag in huis! Ook geldig voor België. Wij brengen Numsy met alle liefde.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="delivery-box detail-delivery-box">
+                <span class="delivery-box-icon detail-delivery-box-icon-2">
+                  <img src="./images/D-6.png" alt="">
+                </span>
+                <div class="delivery-box-right detail-delivery-box-right">
+                  <p class="h3 mt-0 mb-3 text-brand">Slaapgarantie</p>
+                  <p class="copy">Onverhoopt niet tevreden? Je kan het product binnen 30 dagen retourneren.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="delivery-box detail-delivery-box">
+                <span class="delivery-box-icon detail-delivery-box-icon-3">
+                  <img src="./images/D-5.png" alt="">
+                </span>
+                <div class="delivery-box-right detail-delivery-box-right">
+                  <p class="h3 mt-0 mb-3 text-brand">Bezorging binnen 24 uur</p>
+                  <p class="copy">Bij al onze Numsy krijg jij een e-book meegestuurd, geschreven door experts en professionals.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div> 
+
+
+    <div class="buy-bottom-section curvy-section">
+      <div class="curvy-area-single-page-bottom"></div>
+      <div class="container">
+          <div class="row align-items-center">
+              <div class="col-md-12 text-center buy-bottom-copy">
+                  <h3 class="title-secondary text-white h3">Op een leuke en interactieve manier naar bed</h3>
+                  <p class="text-white text-big">Met de MilkyWay tover jij de kamer om tot een adembenemende sterrenhemel.</p>
+                  <div class="buy-product-btn">
+                    <a href="#" class="button button-primary text-black  button-rounded button-big button-icon mt-4"> Bestel MilkyWay White  <i class="fa button-inserted-icon fa-shopping-cart fr-deletable"></i></a>
+                    <a href="#" class="button button-primary text-black  button-rounded button-big button-icon mt-4"> Bestel MilkyWay Black  <i class="fa button-inserted-icon fa-shopping-cart fr-deletable"></i></a>
+                  </div>
+              </div>
+              
+          </div>
+      </div>
+    </div>
+
+     
+
+      
+      <footer id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 footer-col footer-col-1">
+              <div class="footer-col-inner">
+                <h5 class="title-primary h3">Informatie</h5>
+
+                <ul class="footer-quick-links">
+                  <li><a href="#">Over Numsy</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Distribiteur</a></li>
+                  <li><a href="#">Kennisbank</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 footer-col footer-col-2">
+              <div class="footer-col-inner">
+                <h5 class="title-primary h3">Support</h5>
+
+                <ul class="footer-quick-links">
+                  <li><a href="#">Contact ons</a></li>
+                  <li><a href="#">Verzendbeleid</a></li>
+                  <li><a href="#">Restitutiebeleid</a></li>
+                  <li><a href="#">Affiliate programma</a></li>
+                  <li><a href="#">Retourneren</a></li>
+                  <li><a href="#">Disclaimer</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 footer-col footer-col-3">
+              <div class="footer-col-inner">
+                <h5 class="title-primary h3">Adres</h5>
+
+                <ul class="location-links">
+                  <li><i class="fa fa-building"></i> Numsy</li>
+                  <li><i class="fa fa-home"></i> Strevelsweg 700</li>
+                  <li><i class="fa fa-map-marker"></i> 3083AS Rotterdam</li>
+                  <li><i class="fa fa-phone"></i> <a href="tel:31651956654">+31 6 51956654</a></li>
+                  <li><i class="fa fa-envelope"></i> <a href="mailto:info@numsy.nl">info@numsy.nl</a></li>
+                  <li><i class="fa fa-briefcase"></i> KvK nummer: 75123193</li>
+                  <li><i class="fa fa-certificate"></i> BTW nummer: NL860151906B01</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-secondary">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-md-4">
+                <p class="footer-copyright">2021 © Numsy</p>
+              </div>
+              <div class="col-md-4">
+                <ul class="footer-social">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <form class="footer-search">
+                  <input type="search" placeholder="Zoeken.." name="s" />
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script src="js/lightbox.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="./js/app.js"></script>
+</html>

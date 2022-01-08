@@ -1,0 +1,63 @@
+.client-logos-section {
+  /* padding-bottom: 8rem; */
+}
+
+.client-logos-section .curvy-section-inner {
+  padding-top: 4rem;
+  padding-bottom: 13rem;
+}
+
+.curvy-section {
+  background: white;
+}
+
+.curvy-section .curvy-area {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  top: -50px;
+  margin-bottom: -50px;
+  background: white;
+  background-size: cover;
+  -webkit-clip-path: url(#curvy-path);
+  clip-path: url(#curvy-path);
+}
+
+.client-slick .slick-slide {
+  outline: none;
+}
+
+.client-slick .slick-track {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.client-slick .slick-track img {
+  width: 90%;
+  max-width: 180px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.section-title {
+  margin-bottom: 5rem;
+  font-weight: 700;
+  width: 100%;
+}
+
+.section-title:after {
+  content: '';
+  display: block;
+  width: 100%;
+  max-width: 70px;
+  height: 4px;
+  margin: 1.5rem auto;
+  background: var(--textColor);
+  border-radius: 100px;
+}
+
+.section-title.text-white:after {
+  background: white;
+}

@@ -1,0 +1,195 @@
+@media only screen and (max-width:1199px){
+
+    #slider {
+        height: 600px;
+    }
+
+    .slider-backround {
+        right: -30%;
+    }
+
+    .slider-title {
+        font-size: 2.8rem;
+    }
+
+    .slider-title span {
+        font-size: 2.8rem;
+    }
+
+    .content {
+        font-size: 1.6rem;
+    }
+
+    .solid-btn a {
+        padding: 10px 36px;
+    }
+
+    .slider-backround img {
+        width: 80%;
+        height: 100%;
+    }
+    
+    #Donation {
+        padding: 80px 0;
+    }
+
+    .decoration-table {
+        top: -80px;
+        left: -80px;
+    }
+}
+
+@media only screen and (max-width: 991px)  {
+
+    .slider-backround {
+        right: -75%;
+    }
+
+    .decoration-table {
+        top: -60px;
+    }
+    
+    #share, #Donation, #Groth {
+        padding: 65px 0;
+    }
+
+    .table-col {
+        margin-bottom: 30px;
+    }
+
+    .responsive-info {
+        flex-direction: column-reverse;
+    }
+
+    .graph img, .Support-image-wrap img {
+        width: 75%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .graph, .Support-image-wrap {
+        margin-bottom: 30px;
+    }
+
+    .date, .info-title, .info-title span {
+        font-size: 2.8rem;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+
+    .footer-brand {
+        width: 120px;
+        margin: 15px auto;
+    }
+
+    .Groth-wrap {
+        text-align: center;
+    }
+  
+    .share-image {
+        width: 60%;
+        margin-bottom: 30px;
+    }
+
+    .share-wrap {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .share-btns {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 767px){
+
+    .slider-content {
+        text-align: center;
+        padding-top: 92px;
+    }
+
+    #slider {
+        height: 400px;
+    }
+
+    .slider-backround {
+        right: -165%;
+    }
+
+    .slider-backround img {
+        width: 40%;
+        height: 100%;
+    }
+    
+    .content {
+        margin-bottom: 21px;
+    }
+
+    .price-row {
+        padding: 20px;
+    }
+    
+    .brand img {
+        width: 50%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    #share, #Donation, #Groth {
+        padding: 50px 0;
+    }
+
+    .date, .info-title, .info-title span {
+        font-size: 2.4rem;
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width:576px){
+
+    .slider-backround {
+        right: -185%;
+    }
+
+    .slider-backround img {
+        width: 70%;
+        height: 100%;
+    }
+
+    .price-row {
+        padding: 15px;
+    }
+
+    .graph img {
+        width: 100%;
+    }
+
+    .direct-title {
+        font-size: 2.8rem;
+    }
+
+    .direct-text, .direct-text span {
+        font-size: 1.8rem;
+    }
+
+    .date, .info-title, .info-title span {
+        font-size: 2.2rem;
+        line-height: 1.4;
+    }
+
+    .Support-content ul li {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width:496px){
+
+    .slider-backround {
+        right: -300%;
+    }
+
+    .money-text {
+        width: calc(50% - 16px);
+    }
+
+}

@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en" class="sos-root">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SlaapOnderSterren</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap-grid.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <svg class="clip-svg">
+      <clipPath id="cloud-path" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0,0.312 S0.042,-0.007,0.077,0.41 c0,0,0.053,-0.639,0.096,0.107 c0,0,0.042,-0.361,0.073,-0.012 c0,0,0.05,-1.061,0.113,-0.102 c0,0,0.059,-0.49,0.097,0.129 c0,0,0.069,-1.055,0.139,0.154 c0,0,0.042,-0.624,0.087,-0.154 c0,0,0.034,-0.922,0.1,-0.226 c0,0,0.054,-0.313,0.084,0.191 c0,0,0.038,-0.344,0.086,0.081 c0,0,0.025,-0.257,0.048,-0.078 l0,0.502 H0 V0.312"
+        />
+      </clipPath>
+    </svg>
+
+    <svg class="clip-svg">
+      <clipPath id="curvy-path" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0,0.011 v1 h1 V0.011 S0.443,0.64,0.336,0.64 S0,0.011,0,0.011"
+        ></path>
+      </clipPath>
+    </svg>
+
+    <svg class="clip-svg">
+      <clipPath id="overlapping-clouds" clipPathUnits="objectBoundingBox"><path d="M0,0.306 v-0.306 h1 c0,0,0,0.784,0,0.784 c-0.004,0.013,-0.008,0.022,-0.013,0.022 c-0.011,0,-0.022,-0.039,-0.03,-0.104 c-0.009,0.114,-0.023,0.185,-0.039,0.185 c-0.011,0,-0.022,-0.039,-0.03,-0.104 c-0.005,0.066,-0.012,0.11,-0.021,0.11 c-0.014,0,-0.025,-0.117,-0.025,-0.262 c0,-0.01,0,-0.021,0,-0.031 c-0.003,0.018,-0.007,0.028,-0.011,0.028 c-0.003,0,-0.007,-0.007,-0.01,-0.019 c-0.007,0.209,-0.026,0.36,-0.048,0.36 c-0.021,0,-0.039,-0.131,-0.046,-0.318 c-0.008,0.048,-0.016,0.075,-0.026,0.075 c-0.013,0,-0.025,-0.054,-0.034,-0.141 c-0.005,0.238,-0.025,0.416,-0.049,0.416 c-0.02,0,-0.037,-0.122,-0.046,-0.299 c-0.014,0.142,-0.034,0.229,-0.055,0.229 c-0.027,0,-0.05,-0.137,-0.065,-0.346 c-0.006,0.239,-0.027,0.417,-0.052,0.417 c-0.022,0,-0.042,-0.143,-0.05,-0.346 c-0.009,0.065,-0.019,0.103,-0.031,0.103 c-0.01,0,-0.019,-0.026,-0.027,-0.073 c-0.009,0.187,-0.027,0.316,-0.048,0.316 c-0.022,0,-0.041,-0.138,-0.049,-0.335 c-0.008,0.058,-0.019,0.091,-0.029,0.091 c-0.013,0,-0.024,-0.045,-0.033,-0.122 c-0.009,0.169,-0.027,0.284,-0.047,0.284 c-0.02,0,-0.037,-0.11,-0.046,-0.275 c-0.005,0.056,-0.011,0.091,-0.019,0.091 c-0.008,0,-0.02,-0.022,-0.02,-0.097 v-0.331,NaN E%3, C0 p, a0 t0 h0 d=', M1,0.306 v-0.306 h-1 c0,0,0,0.784,0,0.784 c0.004,0.013,0.008,0.022,0.013,0.022 c0.011,0,0.022,-0.039,0.03,-0.104 c0.009,0.114,0.023,0.185,0.039,0.185 c0.011,0,0.022,-0.039,0.03,-0.104 c0.005,0.066,0.012,0.11,0.021,0.11 c0.014,0,0.025,-0.117,0.025,-0.262 c0,-0.01,0,-0.021,0,-0.031 c0.003,0.018,0.007,0.028,0.011,0.028 c0.003,0,0.007,-0.007,0.01,-0.019 c0.007,0.209,0.026,0.36,0.048,0.36 c0.021,0,0.039,-0.131,0.046,-0.318 c0.008,0.048,0.016,0.075,0.026,0.075 c0.013,0,0.025,-0.054,0.034,-0.141 c0.005,0.238,0.025,0.416,0.049,0.416 c0.02,0,0.037,-0.122,0.046,-0.299 c0.014,0.142,0.034,0.229,0.055,0.229 c0.027,0,0.05,-0.137,0.065,-0.346 c0.006,0.239,0.027,0.417,0.052,0.417 c0.022,0,0.042,-0.143,0.05,-0.346 c0.009,0.065,0.019,0.103,0.031,0.103 c0.01,0,0.019,-0.026,0.027,-0.073 c0.009,0.187,0.027,0.316,0.048,0.316 c0.022,0,0.041,-0.138,0.049,-0.335 c0.008,0.058,0.019,0.091,0.029,0.091 c0.013,0,0.024,-0.045,0.033,-0.122 c0.009,0.169,0.027,0.284,0.047,0.284 c0.02,0,0.037,-0.11,0.046,-0.275 c0.005,0.056,0.011,0.091,0.019,0.091 c0.008,0,0.02,-0.022,0.02,-0.097 v-0.331"></path></clipPath>
+    </svg>
+
+    <svg id="stars" style="display: none" version="1.1">
+      <symbol id="stars-full-star" viewBox="0 0 102 18">
+        <path
+          d="M9.5 14.25l-5.584 2.936 1.066-6.218L.465 6.564l6.243-.907L9.5 0l2.792 5.657 6.243.907-4.517 4.404 1.066 6.218"
+        />
+      </symbol>
+
+      <symbol id="stars-half-star" viewBox="0 0 102 18">
+        <path
+          d="M9.5 14.25l-5.584 2.936 1.066-6.218L.465 6.564l6.243-.907L9.5 0l2.792"
+          style="fill: var(--starRatingColor);"
+        />
+      </symbol>
+
+      <symbol id="stars-all-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-full-star" />
+        <use xlink:href="#stars-full-star" transform="translate(21)" />
+        <use xlink:href="#stars-full-star" transform="translate(42)" />
+        <use xlink:href="#stars-full-star" transform="translate(63)" />
+        <use xlink:href="#stars-full-star" transform="translate(84)" />
+      </symbol>
+
+      <symbol id="stars-0-0-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-all-star" style="fill: var(--starRatingGrey);" />
+      </symbol>
+
+      <symbol id="stars-0-5-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-0-0-star" />
+        <use xlink:href="#stars-half-star" />
+      </symbol>
+
+      <symbol id="stars-1-0-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-0-0-star" />
+        <use xlink:href="#stars-full-star" style="fill: var(--starRatingColor);" />
+      </symbol>
+
+      <symbol id="stars-1-5-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-1-0-star" />
+        <use xlink:href="#stars-half-star" transform="translate(21)" />
+      </symbol>
+
+      <symbol id="stars-2-0-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-1-0-star" />
+        <use
+          xlink:href="#stars-full-star"
+          style="fill: var(--starRatingColor);"
+          transform="translate(21)"
+        />
+      </symbol>
+
+      <symbol id="stars-2-5-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-2-0-star" />
+        <use xlink:href="#stars-half-star" transform="translate(42)" />
+      </symbol>
+
+      <symbol id="stars-3-0-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-2-0-star" />
+        <use
+          xlink:href="#stars-full-star"
+          style="fill: var(--starRatingColor);"
+          transform="translate(42)"
+        />
+      </symbol>
+
+      <symbol id="stars-3-5-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-3-0-star" />
+        <use xlink:href="#stars-half-star" transform="translate(63)" />
+      </symbol>
+
+      <symbol id="stars-4-0-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-3-0-star" />
+        <use
+          xlink:href="#stars-full-star"
+          style="fill: var(--starRatingColor);"
+          transform="translate(63)"
+        />
+      </symbol>
+
+      <symbol id="stars-4-5-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-4-0-star" />
+        <use xlink:href="#stars-half-star" transform="translate(84)" />
+      </symbol>
+
+      <symbol id="stars-5-0-star" viewBox="0 0 102 18">
+        <use xlink:href="#stars-all-star" style="fill: var(--starRatingColor);" />
+      </symbol>
+    </svg>
+
+    <div class="page-wrap">
+      <header id="top-header">
+        <div class="container">
+          <div class="row top-header-row">
+            <div class="col top-logo">
+              <a href="#">
+                <img src="./images/LOGO.webp" alt="" />
+              </a>
+            </div>
+            <nav class="col top-nav">
+              <ul>
+                <!-- <li><a href="#">Over ons</a></li>
+                <li class="has-children">
+                  <a href="#">Our Products</a>
+                  <ul>
+                    <li><a href="#">Werking</a></li>
+                    <li><a href="#">Voor Baby's & Kinderen</a></li>
+                    <li><a href="#">Voor Volwassenen</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Droomshop</a></li>
+                <li class="has-children">
+                  <a href="#">Contact</a>
+                  <ul>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Bericht ons</a></li>
+                  </ul>
+                </li> -->
+                <li class="mobile-only mobile-store-cta button-importent">
+                  <a
+                    href="#"
+                    class=""
+                    >Aanmelden als affiliate</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <div class="col top-cta cta-affilate">
+              <button class="mobile-only mobile-nav-toggle">
+                <i class="fa fa-bars"></i>
+              </button>
+              <a
+                href="#"
+                class="button button-primary button-shadow button-small desktop-only button-importent"
+                >Aanmelden als affiliate</a
+              >
+            </div>
+          </div>
+        </div>
+        <div id="progress-bar" class="progressbar-top">
+          <i class="fa fa-star" id="progress-bar-icon"></i>
+        </div>
+      </header>
+
+      <div id="affiliate-hero" style="background:#009688;">
+        <div class="dots-bg-wrapper">
+            <div class="dots-1 dots"></div>
+            <div class="dots-2 dots"></div>
+            <div class="dots-3 dots"></div>
+        </div>
+        <div class="container">
+          <div class="hero-copy">
+            <h1 class="text-white hero-title mb2">
+                Affiliate programma Numsy
+            </h1>
+            <div class="text-big text-white hero-subtitle mb3 auto-type">
+              <div class="text-js">
+                Word affiliate van Numsy en ontvang 15% commissie per verkoop!
+              </div>
+            </div>
+            <p class="hero-cta">
+              <a
+                href="#"
+                class="button button-primary button-rounded affiliate-btn button-importent button-big button-icon"
+                >Vraag direct je affiliate link aan!  <i class="fa fa-sign-out"></i></a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="affiliate-intro-section cloudy-section">
+        <!-- <div class="section-divider-top divider-section"></div> -->
+        <div class="cloud-area"></div>
+        <div class="container">
+          <div class="row pb-5">
+            <div class="col-md-7 her-bio">
+              <h2>Samen naar beter slapend Nederland & België</h2>
+              <p>
+                Met Numsy kan elke ouder zelfstandig aan de slag met interactieve challenges, slaapgidsen en producten. Om te werken aan een beter slaapritme en nachtrust voor hun kindje. 
+              </p>
+
+              <p>
+                Op deze pagina kun je jezelf&nbsp;<strong>aanmelden als affiliate van Numsy</strong>.&nbsp;Als affiliate promoot je onze slaapgidsen, producten of diensten op no cure, no pay basis. Dat betekent dat je bezoekers naar ons doorstuurt via jouw unieke promotielink en een aanbrengvergoeding (affiliate commissie) krijgt voor iedere klant die je bij ons aandraagt.
+              </p>
+              <p>
+                Je ontvangt maar liefst 15% commissie per verkocht onderdeel. Bij een slaapgids betekent dit dat je €3,- per verkocht slaapgids verdient en bij producten op kan lopen tot zelfs €12,- en meer! Als de klant besluit meerdere producten te kopen binnen 30 dagen zal jij hier ook commissie over ontvangen. Ga jij de samenwerking aan?
+              </p>
+              <p>
+                <a
+                href="#"
+                class="button button-primary button-rounded affiliate-btn button-importent button-big button-icon">Aanmelden <i class="fa fa-sign-out"></i></a>
+              </p>
+            </div>
+            <div class="col-md-5 her-image">
+              <img src="./images/affiliate-books.png" alt="" class="mt4" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="how-it-section">
+          <div class="container ">
+              <div class="row">
+                <h3 class="text-center next-step mt-0 mb-0 ">
+                    Hoe werkt het affiliate programma van Numsy?
+                </h3>
+                <div class="chain-marketing">
+                    <img src="./images/chain-marketing.png" alt="">
+                </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="Advantages-section">
+        <div class="cloudy-section-inner">
+          <div class="container Advantages-container">
+            <h2 class="text-center Advantages-title title-secondary   mt-0">
+              Voordelen van ons <strong>affiliate programma</strong>
+            </h2>
+            <div class="row Advantages mb-5">
+              
+              
+              <div class="col-md-6 mb-3">
+                <div class="Advantages-box">
+
+                  <div class="row Advantages mb-5">
+                    <div class="col-md-3">
+                      <div class="Advantage-image">
+                        <img src="./images/Advantage-1.png" alt="">
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <h4 class="Advantage-sub-title mt-0 mb-3 h3 title-secondary">
+                        15% commissie
+                      </h4>
+                      <p class="Advantage-contant mt-1">
+                        15% commissie op elke aankoop van klanten die via jouw affiliate link kopen.
+                      </p>
+                    </div>
+                  </div>
+
+                </div> 
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <div class="Advantages-box">
+
+                  <div class="row Advantages mb-5">
+                    <div class="col-md-3">
+                      <div class="Advantage-image">
+                        <img src="./images/Advantage-2.png" alt="">
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <h4 class="Advantage-sub-title mt-0 mb-3 h3 title-secondary">
+                        Maandelijkse uitbetaling
+                      </h4>
+                      <p class="Advantage-contant mt-1">
+                        Wij betalen elke maand je commissies uit. Zo kom je niet voor onverwachte verrassingen te staan.
+                      </p>
+                    </div>
+                  </div>
+
+                </div> 
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <div class="Advantages-box">
+
+                  <div class="row Advantages mb-5">
+                    <div class="col-md-3">
+                      <div class="Advantage-image">
+                        <img src="./images/Advantage-3.png" alt="">
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <h4 class="Advantage-sub-title mt-0 mb-3 h3 title-secondary">
+                        Lage refund rate
+                      </h4>
+                      <p class="Advantage-contant mt-1">
+                        Slechts 0,5% van de aankopen retourneert zijn aankoop binnen de bedenktijd en wordt terugbetaald.
+                      </p>
+                    </div>
+                  </div>
+
+                </div> 
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <div class="Advantages-box">
+
+                  <div class="row Advantages mb-5">
+                    <div class=" col-md-3">
+                      <div class="Advantage-image">
+                        <img src="./images/Advantage-4.png" alt="">
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <h4 class="Advantage-sub-title mt-0 mb-3 h3 title-secondary">
+                        Affiliate dashboard (realtime)
+                      </h4>
+                      <p class="Advantage-contant mt-1">
+                        Je krijgt toegang tot een live dashboard waarin je precies kunt zien hoeveel clicks en sales je hebt gerealiseerd.
+                      </p>
+                    </div>
+                  </div>
+
+                </div> 
+              </div>
+
+
+              <div class="col-md-6 mb-3">
+                <div class="Advantages-box">
+
+                  <div class="row Advantages mb-5">
+                    <div class="col-md-3">
+                      <div class="Advantage-image">
+                        <img src="./images/Advantage-5.png" alt="">
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <h4 class="Advantage-sub-title mt-0 mb-3 h3 title-secondary">
+                        In 60 seconden klaar
+                      </h4>
+                      <p class="Advantage-contant mt-1">
+                        Aanmelden voor het affiliateprogramma is zo gepiept. Je kunt direct promoten met jouw persoonlijke affiliatelink!
+                      </p>
+                    </div>
+                  </div>
+
+                </div> 
+              </div>
+
+
+              <div class="col-md-6 mb-3">
+                <div class="Advantages-box">
+
+                  <div class="row Advantages mb-5">
+                    <div class="col-md-3">
+                      <div class="Advantage-image">
+                        <img src="./images/Advantage-6.png" alt="">
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <h4 class="Advantage-sub-title mt-0 mb-3 h3 title-secondary">
+                        15% commissie
+                      </h4>
+                      <p class="Advantage-contant mt-1">
+                        15% commissie op elke aankoop van klanten die via jouw affiliate link kopen.
+                      </p>
+                    </div>
+                  </div>
+
+                </div> 
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="money-way-section curvy-section custom-search-section">
+        <div class="curvy-area"></div>
+        <div class="dots-bg-wrapper">
+          <div class="dots-1 dots"></div>
+          <div class="dots-2 dots"></div>
+          <div class="dots-3 dots"></div>
+        </div>
+        <div class="curvy-section-inner pb-0">
+          <div class="container">
+            <h2 class="text-center money-way-title title-secondary   ">
+              Op deze manieren kun je <strong>geld verdienen als affiliate</strong>
+            </h2>
+            
+            <p class="h3 money-way-text text-center mt-5 mb-3">Promoot verschillende strategische pagina's op onze website of ga de samenwerking met ons aan voor de hoogste conversie!</p>
+            
+          </div>
+        </div>
+        <div class="curvy-area curvy-area-bottom"></div>
+      </div>
+
+      
+      <div class="our-pages-section">
+          <div class="container our-page-container">
+            <div class="row">
+              <div class="col-md-4 mt-5 mb-5">
+                  <div class="page-photo">
+                    <img src="./images/page-1.jpg" alt="">
+                  </div>
+                  <h4 class="page-sub-title">
+                    Homepage
+                  </h4>
+                  <div class="page-description ">
+                    Stuur je bezoeker naar de geoptimaliseerde homepage van Numsy voor een soepele gebruikerservaring.
+                  </div>
+              </div>
+
+              <div class="col-md-4 mt-5 mb-5">
+                <div class="page-photo">
+                  <img src="./images/page-2.jpg" alt="">
+                </div>
+                <h4 class="page-sub-title">
+                  Specifieke landingspagina
+                </h4>
+                <div class="page-description ">
+                  Enthousiast over een bepaalde functie? Stuur je bezoeker naar onze specifieke landingspagina over die functionaliteit!
+                </div>
+            </div>
+
+            <div class="col-md-4 mt-5 mb-5">
+              <div class="page-photo">
+                <img src="./images/page-3.png" alt="">
+              </div>
+              <h4 class="page-sub-title">
+                Challenge of Slaapgidsen
+              </h4>
+              <div class="page-description ">
+                Niet meteen commercieel promoten? Verwijs dan naar onze gratis e-books. Onze funnel zet je leads om in sales en dus commissie voor jou!
+              </div>
+            </div>
+
+            <div class="col-md-4 mt-5 mb-5">
+              <div class="page-photo">
+                <img src="./images/page-4.png" alt="">
+              </div>
+              <h4 class="page-sub-title">
+                Gratis diensten
+              </h4>
+              <div class="page-description ">
+                Verwijs je bezoekers naar de gratis diensten. Zodra iemand toch aankoopt wordt de commissie aan je toegekend.
+              </div>
+            </div>
+
+            <div class="col-md-4 mt-5 mb-5">
+              <div class="page-photo">
+                <img src="./images/page-5.png" alt="">
+              </div>
+              <h4 class="page-sub-title">
+                Gezamenlijk webinar
+              </h4>
+              <div class="page-description ">
+                Heb je een grote achterban? Organiseer samen met ons een webinar waarin wij waarde geven en Numsy via jouw link aanbieden.
+              </div>
+            </div>
+
+            <div class="col-md-4 mt-5 mb-5">
+              <div class="page-photo">
+                <img src="./images/page-6.png" alt="">
+              </div>
+              <h4 class="page-sub-title">
+                Meedoen met lanceringen
+              </h4>
+              <div class="page-description ">
+                Wij stellen je op de hoogte van onze eigen lanceringen zodat je mee kunt doen en profiteren van torenhoge verkopen!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="empty-section"> </div>
+
+      <div class="ready-section curvy-section">
+        <div class="dots-bg-wrapper">
+          <div class="dots-1 dots"></div>
+          <div class="dots-2 dots"></div>
+          <div class="dots-3 dots"></div>
+        </div>
+        <div class="curvy-section-inner">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <h2 class="text-center ready-title h3 title-secondary">
+                  Klaar om ouders meer te laten slapen?
+                </h2>
+              </div>
+              <div class="col-md-6">
+                <a href="#" class="ready-btn button button-primary button-rounded affiliate-btn button-importent button-big button-icon">Ik word affiliate</a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="team-section"> 
+
+          <div class="cloudy-section-inner">
+            <div class="container team-container">
+              <h2 class="text-center team-title title-secondary mt-0">
+                Dit is wat anderen zeggen over Numsy:
+              </h2>
+              <div class="row team mb-5">
+                
+                
+                <div class="col-md-4 team-box-margin">
+                  <div class="team-box">
+  
+                    <div class="rola-description">
+                      Numsy promoten voelt eerlijk en geruststellend. Ik weet dat het wetenschappelijk onderbouwd is en ze alles eraan doen om leren slapen toegankelijk te maken.
+                    </div>
+                    <div class="member-detail-wrap">
+                      <div class="member-details">
+                        <div class="member-photo">
+                          <img src="./images/member-1.png" alt="">
+                        </div>
+                        <div class="mamber-name">
+                          Influencer Kim
+                        </div>
+                      </div>
+                    </div>
+
+                  </div> 
+                </div>
+  
+                <div class="col-md-4 team-box-margin">
+                  <div class="team-box">
+                  
+                    <div class="rola-description">
+                      Ik raad als slaapcoach vaak aan om de wetenschappelijk onderbouwde slaapproducten van Numsy in te zetten voor het verbeteren van nachtrust.
+                    </div>
+  
+                    <div class="member-detail-wrap">
+                      <div class="member-details">
+                        <div class="member-photo">
+                          <img src="./images/member-2.jpg" alt="">
+                        </div>
+                        <div class="mamber-name">
+                            Slaapcoach Maaike
+                        </div>
+                      </div>
+                    </div>
+
+                  </div> 
+                </div>
+  
+                <div class="col-md-4 team-box-margin">
+                  <div class="team-box">
+  
+                    <div class="rola-description">
+                      De focus op zelfstandig leren slapen spreekt mij als blogger enorm aan om over te schrijven. Leren slapen hoeft niet moeilijk of duur te zijn!
+                    </div>
+                    <div class="member-detail-wrap">
+                      <div class="member-details">
+                        <div class="member-photo">
+                          <img src="./images/member-3.png" alt="">
+                        </div>
+                        <div class="mamber-name">
+                          Blogger  Vera
+                        </div>
+                      </div>
+                    </div>
+                      
+  
+                  </div> 
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+      <div class="FAQ-Section">
+        <div class="container FAQ-container">
+          <div class="row FAQ-Row">
+            <div class="col-lg-6 col-md-6">
+              <h2 class="text-center FAQ-title title-secondary  ">
+                Veelgestelde vragen
+              </h2>
+            </div>
+
+            <div class="col-md-6 d-none d-md-block">
+              <p>
+                <br><br>
+              </p>
+            </div>
+          
+              <div class="col-md-6 mb-5 mt-3">
+                <div class="question">
+                  <strong>Hoe weten jullie dat een verkoop via mij is gemaakt?</strong>
+                </div>
+                <div class="answer">
+                  Je krijgt een persoonlijke affiliatelink waarmee je onze producten kunt promoten. Wanneer iemand op jouw affiliatelink klikt wordt er een cookie geplaatst op zijn/haar apparaat waardoor ons betaalsysteem weet dat deze verkoop via jou is gemaakt. Deze verkoop wordt vervolgens automatisch aan jouw account gekoppeld.
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-5 mt-3 endline">
+                <div class="odd-answer">
+                  <div class="question">
+                    <strong>Hoeveel kan ik verdienen als affiliate?</strong>
+                  </div>
+                  <div class="answer">
+                    Er zit geen plafond op de inkomsten die je kunt genereren. De commissie die je ontvangt is ... Hoe meer mensen je aanbrengt, hoe sneller je inkomsten zullen stijgen.
+                  </div>
+                </div>
+               
+              </div>
+
+              <div class="col-md-6 mb-5 mt-3">
+                <div class="question">
+                  <strong>Wat is de uitbetaaltermijn?</strong>
+                </div>
+                <div class="answer">
+                  Elke maand wordt er een uitbetaling gedaan voor vrijgegeven betalingen. Bij iDEAL betalingen worden deze na 28 dagen vrijgegeven, bij automatische incasso's na 60 dagen. In jouw persoonlijke affiliate-account kun je precies zien welke betalingen wel/niet zijn vrijgegeven en hoeveel commissies je tot nu toe hebt verdiend.
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-5 mt-3">
+                <div class="question">
+                  <strong>Wat is de cookieduur?</strong>
+                </div>
+                <div class="answer">
+                  Wij maken gebruik van een cookieduur van 30 dagen. Wanneer iemand in 30 dagen besluit om gebruik te maken van onze software nadat hij/zij op jouw link heeft geklikt, dan wordt de commissie toegekend aan jouw account.
+                </div>
+              </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="get-start-section curvy-section">
+        <div class="dots-bg-wrapper">
+          <div class="dots-1 dots"></div>
+          <div class="dots-2 dots"></div>
+          <div class="dots-3 dots"></div>
+        </div>
+        <div class="curvy-section-inner pb-0">
+          <div class="container text-center">
+            <h2 class="text-center get-start-title title-secondary ">
+              In 60 seconden aan de slag!
+            </h2>
+            
+            <a href="#" class="get-start-btn button button-primary button-rounded affiliate-btn button-importent button-big button-icon">Ik word affiliate</a>
+            
+          </div>
+        </div>
+        <div class="curvy-area curvy-area-bottom curve-area-60-sec"></div>
+      </div>
+
+      <div class="why-like-section">
+        <div class="container">
+          <div class="row mt-5 pt-3 align-items-center book-row">
+            <div class="col-md-9">
+              <h2 class="title-secondary">Even overleggen?</h2>
+              <p class="text-big">Heb je een grote achterban en ben je ook nog eens groot fan van Numsy en/of de andere diensten, producten en online challenges? Geweldig!
+              </p>
+              <p>
+                We nodigen je van harte uit om even contact op te nemen wanneer je wilt overleggen omtrent een meer op maat samenwerking. Wil je bijvoorbeeld een gezamenlijk webinar organiseren, ons interviewen, onze blogs, video's, e-books en andere materialen als white label gebruiken of zelfs samen een actie opzetten? 
+              </p>
+              <p>
+                We denken graag met je mee over de ideale samenwerking. 
+              </p>
+              <p>
+                <a href="#" class="button Download-Gratis button-primary button-rounded affiliate-btn button-importent button-big">Download Gratis</a>
+              </p>
+            </div>
+            <div class="col-md-3">
+              <div class="why-like-image">
+                <img src="./images/why-like.png" alt="" class="mx-sm-auto image m-auto ">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 footer-col footer-col-1">
+              <div class="footer-col-inner">
+                <h5 class="title-primary h3">Informatie</h5>
+
+                <ul class="footer-quick-links">
+                  <li><a href="#">Over Numsy</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Distribiteur</a></li>
+                  <li><a href="#">Kennisbank</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 footer-col footer-col-2">
+              <div class="footer-col-inner">
+                <h5 class="title-primary h3">Support</h5>
+
+                <ul class="footer-quick-links">
+                  <li><a href="#">Contact ons</a></li>
+                  <li><a href="#">Verzendbeleid</a></li>
+                  <li><a href="#">Restitutiebeleid</a></li>
+                  <li><a href="#">Affiliate programma</a></li>
+                  <li><a href="#">Retourneren</a></li>
+                  <li><a href="#">Disclaimer</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 footer-col footer-col-3">
+              <div class="footer-col-inner">
+                <h5 class="title-primary h3">Adres</h5>
+
+                <ul class="location-links">
+                  <li><i class="fa fa-building"></i> Numsy</li>
+                  <li><i class="fa fa-home"></i> Strevelsweg 700</li>
+                  <li><i class="fa fa-map-marker"></i> 3083AS Rotterdam</li>
+                  <li><i class="fa fa-phone"></i> <a href="tel:31651956654">+31 6 51956654</a></li>
+                  <li><i class="fa fa-envelope"></i> <a href="mailto:info@numsy.nl">info@numsy.nl</a></li>
+                  <li><i class="fa fa-briefcase"></i> KvK nummer: 75123193</li>
+                  <li><i class="fa fa-certificate"></i> BTW nummer: NL860151906B01</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-secondary">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-md-4">
+                <p class="footer-copyright">2021 © Numsy</p>
+              </div>
+              <div class="col-md-4">
+                <ul class="footer-social">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <form class="footer-search">
+                  <input type="search" placeholder="Zoeken.." name="s" />
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="./js/app.js"></script>
+</html>

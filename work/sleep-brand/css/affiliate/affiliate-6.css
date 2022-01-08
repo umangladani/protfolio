@@ -1,0 +1,20 @@
+.our-pages-section {
+    padding-top: 50px;
+}
+
+h4.page-sub-title {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align:center;
+}
+
+.page-description {
+    text-align: center;
+}
+
+@media only screen and (max-width: 767px)  {
+    .our-pages-section {
+        padding-top: 50px;
+    }
+    
+}

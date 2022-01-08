@@ -1,0 +1,22 @@
+.affiliate-intro-section{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #fff;
+    position: relative;
+}
+
+.affiliate-intro-section.cloudy-section .cloud-area {
+    top: -100px;
+}
+
+@media only screen and (max-width: 767px)  {
+    .affiliate-intro-section{
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .section-divider-top {
+        top: -25px;
+    }
+
+}

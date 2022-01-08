@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en" class="sos-root">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SlaapOnderSterren</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap-grid.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body class="inner-page">
+    <svg class="clip-svg">
+      <clipPath id="cloud-path" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0,0.312 S0.042,-0.007,0.077,0.41 c0,0,0.053,-0.639,0.096,0.107 c0,0,0.042,-0.361,0.073,-0.012 c0,0,0.05,-1.061,0.113,-0.102 c0,0,0.059,-0.49,0.097,0.129 c0,0,0.069,-1.055,0.139,0.154 c0,0,0.042,-0.624,0.087,-0.154 c0,0,0.034,-0.922,0.1,-0.226 c0,0,0.054,-0.313,0.084,0.191 c0,0,0.038,-0.344,0.086,0.081 c0,0,0.025,-0.257,0.048,-0.078 l0,0.502 H0 V0.312"
+        />
+      </clipPath>
+    </svg>
+
+    <svg class="clip-svg">
+      <clipPath id="curvy-path" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0,0.011 v1 h1 V0.011 S0.443,0.64,0.336,0.64 S0,0.011,0,0.011"
+        ></path>
+      </clipPath>
+    </svg>
+
+    <svg class="clip-svg">
+      <clipPath id="overlapping-clouds" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0,0.306 v-0.306 h1 c0,0,0,0.784,0,0.784 c-0.004,0.013,-0.008,0.022,-0.013,0.022 c-0.011,0,-0.022,-0.039,-0.03,-0.104 c-0.009,0.114,-0.023,0.185,-0.039,0.185 c-0.011,0,-0.022,-0.039,-0.03,-0.104 c-0.005,0.066,-0.012,0.11,-0.021,0.11 c-0.014,0,-0.025,-0.117,-0.025,-0.262 c0,-0.01,0,-0.021,0,-0.031 c-0.003,0.018,-0.007,0.028,-0.011,0.028 c-0.003,0,-0.007,-0.007,-0.01,-0.019 c-0.007,0.209,-0.026,0.36,-0.048,0.36 c-0.021,0,-0.039,-0.131,-0.046,-0.318 c-0.008,0.048,-0.016,0.075,-0.026,0.075 c-0.013,0,-0.025,-0.054,-0.034,-0.141 c-0.005,0.238,-0.025,0.416,-0.049,0.416 c-0.02,0,-0.037,-0.122,-0.046,-0.299 c-0.014,0.142,-0.034,0.229,-0.055,0.229 c-0.027,0,-0.05,-0.137,-0.065,-0.346 c-0.006,0.239,-0.027,0.417,-0.052,0.417 c-0.022,0,-0.042,-0.143,-0.05,-0.346 c-0.009,0.065,-0.019,0.103,-0.031,0.103 c-0.01,0,-0.019,-0.026,-0.027,-0.073 c-0.009,0.187,-0.027,0.316,-0.048,0.316 c-0.022,0,-0.041,-0.138,-0.049,-0.335 c-0.008,0.058,-0.019,0.091,-0.029,0.091 c-0.013,0,-0.024,-0.045,-0.033,-0.122 c-0.009,0.169,-0.027,0.284,-0.047,0.284 c-0.02,0,-0.037,-0.11,-0.046,-0.275 c-0.005,0.056,-0.011,0.091,-0.019,0.091 c-0.008,0,-0.02,-0.022,-0.02,-0.097 v-0.331,NaN E%3, C0 p, a0 t0 h0 d=', M1,0.306 v-0.306 h-1 c0,0,0,0.784,0,0.784 c0.004,0.013,0.008,0.022,0.013,0.022 c0.011,0,0.022,-0.039,0.03,-0.104 c0.009,0.114,0.023,0.185,0.039,0.185 c0.011,0,0.022,-0.039,0.03,-0.104 c0.005,0.066,0.012,0.11,0.021,0.11 c0.014,0,0.025,-0.117,0.025,-0.262 c0,-0.01,0,-0.021,0,-0.031 c0.003,0.018,0.007,0.028,0.011,0.028 c0.003,0,0.007,-0.007,0.01,-0.019 c0.007,0.209,0.026,0.36,0.048,0.36 c0.021,0,0.039,-0.131,0.046,-0.318 c0.008,0.048,0.016,0.075,0.026,0.075 c0.013,0,0.025,-0.054,0.034,-0.141 c0.005,0.238,0.025,0.416,0.049,0.416 c0.02,0,0.037,-0.122,0.046,-0.299 c0.014,0.142,0.034,0.229,0.055,0.229 c0.027,0,0.05,-0.137,0.065,-0.346 c0.006,0.239,0.027,0.417,0.052,0.417 c0.022,0,0.042,-0.143,0.05,-0.346 c0.009,0.065,0.019,0.103,0.031,0.103 c0.01,0,0.019,-0.026,0.027,-0.073 c0.009,0.187,0.027,0.316,0.048,0.316 c0.022,0,0.041,-0.138,0.049,-0.335 c0.008,0.058,0.019,0.091,0.029,0.091 c0.013,0,0.024,-0.045,0.033,-0.122 c0.009,0.169,0.027,0.284,0.047,0.284 c0.02,0,0.037,-0.11,0.046,-0.275 c0.005,0.056,0.011,0.091,0.019,0.091 c0.008,0,0.02,-0.022,0.02,-0.097 v-0.331"
+        ></path>
+      </clipPath>
+    </svg>
+
+    <div class="page-wrap">
+      <header id="top-header">
+        <div class="container">
+          <div class="row top-header-row">
+            <div class="col top-logo">
+              <a href="#">
+                <img src="./images/LOGO.webp" alt="" />
+              </a>
+            </div>
+            <nav class="col top-nav">
+              <ul>
+                <li><a href="#">Over ons</a></li>
+                <li class="has-children">
+                  <a href="#">Our Products</a>
+                  <ul>
+                    <li><a href="#">Werking</a></li>
+                    <li><a href="#">Voor Baby's & Kinderen</a></li>
+                    <li><a href="#">Voor Volwassenen</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Droomshop</a></li>
+                <li class="has-children">
+                  <a href="#">Contact</a>
+                  <ul>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Bericht ons</a></li>
+                  </ul>
+                </li>
+                <li class="mobile-only mobile-store-cta button-importent">
+                  <a href="#" class="">Store</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="col top-cta">
+              <button class="mobile-only mobile-nav-toggle">
+                <i class="fa fa-bars"></i>
+              </button>
+              <a
+                href="#"
+                class="button button-primary button-shadow button-small desktop-only button-importent"
+                >Store</a
+              >
+            </div>
+          </div>
+        </div>
+        <div id="progress-bar">
+          <i class="fa fa-star" id="progress-bar-icon"></i>
+        </div>
+      </header>
+
+      <div id="home-hero" style="background-image: url(./images/SLIDER-3.webp)">
+        <div class="container">
+          <div class="hero-copy">
+            <h1 class="text-white hero-title mb2">De Droomshop</h1>
+            <div class="text-big text-white hero-subtitle mb3">van Numsy</div>
+            <p class="hero-cta text-center-mobile">
+              <a
+                href="#"
+                class="button button-importent button-primary button-rounded button-big button-icon"
+                >Bekijk Droomshop<i class="fa fa-sign-out"></i
+              ></a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cloudy-section p-products-section">
+
+        <div class="dots-bg-wrapper">
+          <div class="dots-1 dots"></div>
+          <div class="dots-2 dots"></div>
+          <div class="dots-3 dots"></div>
+        </div>
+
+        <div class="cloud-area"></div>
+        <div class="cloudy-section-inner">
+          <div class="container">
+            <h2 class="text-center">
+              Bekijk onze white noise categorieën
+              <span class="p-big-icon"><i class="fa fa-angle-down"></i></span>
+            </h2>
+          </div>
+
+          <div class="products-block">
+            <div class="container">
+              <h3 class="h2 text-center">Slapend onderweg</h3>
+              <div class="products-block-copy text-center text-big">
+                <p>
+                  In deze categorie delen we graag ons assortiment "Dromend
+                  onderweg". Deze modellen zijn uiterst gebruiksvriendelijk,
+                  natuurlijk draadloos en makkelijk om mee te nemen. Een
+                  bijkomend voordeel van al deze apparaten zijn dat de batterij
+                  langdurig meegaat én dat je ze kunt ophangen aan bijvoorbeeld
+                  de wieg, buggy, deurklink of aan je arm.
+                </p>
+              </div>
+
+              <div class="row products-block-grid">
+                <div class="col-md-4">
+                  <div class="product-item">
+                    <p class="h3 title-secondary mt-3 mb-3 text-center">
+                      Numsy Original
+                    </p>
+                    <figure class="product-image">
+                      <img src="./images/PR-1.jpg" alt="" />
+                    </figure>
+                    <p class="product-price">29.95</p>
+                    <ul class="product-features">
+                      <li>9 Natuurlijke geluiden</li>
+                      <li>Blauw ademend licht</li>
+                      <li>Tot 12 uur non-stop spelen</li>
+                      <li>Batterij tot 36 uur mee</li>
+                      <li>Ophangbaar</li>
+                      <li>Draadloos</li>
+                      <li>(Continue) Timer</li>
+                      <li>60 Decibel</li>
+                    </ul>
+                    <div class="product-button">
+                      <a href="#" class="button button-rounded text-black  button-primary"
+                        >Bekijk Original</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="product-item">
+                    <p class="h3 title-secondary mt-3 mb-3 text-center">
+                      Numsy Original
+                    </p>
+                    <figure class="product-image">
+                      <img src="./images/PR-2.webp" alt="" />
+                    </figure>
+                    <p class="product-price">29.95</p>
+                    <ul class="product-features">
+                      <li>9 Natuurlijke geluiden</li>
+                      <li>Blauw ademend licht</li>
+                      <li>Tot 12 uur non-stop spelen</li>
+                      <li>Batterij tot 36 uur mee</li>
+                      <li>Ophangbaar</li>
+                      <li>Draadloos</li>
+                      <li>(Continue) Timer</li>
+                      <li>60 Decibel</li>
+                    </ul>
+                    <div class="product-button">
+                      <a href="#" class="button button-rounded text-black  button-primary"
+                        >Bekijk Original</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="product-item">
+                    <p class="h3 title-secondary mt-3 mb-3 text-center">
+                      Numsy Original
+                    </p>
+                    <figure class="product-image">
+                      <img src="./images/PR-3.webp" alt="" />
+                    </figure>
+                    <p class="product-price">29.95</p>
+                    <ul class="product-features">
+                      <li>9 Natuurlijke geluiden</li>
+                      <li>Blauw ademend licht</li>
+                      <li>Tot 12 uur non-stop spelen</li>
+                      <li>Batterij tot 36 uur mee</li>
+                      <li>Ophangbaar</li>
+                      <li>Draadloos</li>
+                      <li>(Continue) Timer</li>
+                      <li>60 Decibel</li>
+                    </ul>
+                    <div class="product-button">
+                      <a href="#" class="button button-rounded text-black  button-primary"
+                        >Bekijk Original</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="what-we-do-cloud p-products-cloud-devider p-products-cloud-devider-white"
+      ></div>
+
+      <div class="p-products-section p-products-section-green pt50">
+
+        <div class="dots-bg-wrapper">
+          <div class="dots-1 dots"></div>
+          <div class="dots-2 dots"></div>
+          <div class="dots-3 dots"></div>
+        </div>
+
+        <div class="products-block pt-0">
+          <div class="container pt50">
+            <h3 class="h2 text-center">Slapend onderweg</h3>
+            <div class="products-block-copy text-center text-big">
+              <p>
+                In deze categorie delen we graag ons assortiment "Dromend
+                onderweg". Deze modellen zijn uiterst gebruiksvriendelijk,
+                natuurlijk draadloos en makkelijk om mee te nemen. Een bijkomend
+                voordeel van al deze apparaten zijn dat de batterij langdurig
+                meegaat én dat je ze kunt ophangen aan bijvoorbeeld de wieg,
+                buggy, deurklink of aan je arm.
+              </p>
+            </div>
+
+            <div class="row products-block-grid">
+              <div class="col-md-4">
+                <div class="product-item">
+                  <p class="h3 title-secondary mt-3 mb-3 text-center">
+                    Numsy Original
+                  </p>
+                  <figure class="product-image">
+                    <img src="./images/PR-1.jpg" alt="" />
+                  </figure>
+                  <p class="product-price">29.95</p>
+                  <ul class="product-features">
+                    <li>9 Natuurlijke geluiden</li>
+                    <li>Blauw ademend licht</li>
+                    <li>Tot 12 uur non-stop spelen</li>
+                    <li>Batterij tot 36 uur mee</li>
+                    <li>Ophangbaar</li>
+                    <li>Draadloos</li>
+                    <li>(Continue) Timer</li>
+                    <li>60 Decibel</li>
+                  </ul>
+                  <div class="product-button">
+                    <a href="#" class="button button-rounded text-black  button-primary"
+                      >Bekijk Original</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="product-item">
+                  <p class="h3 title-secondary mt-3 mb-3 text-center">
+                    Numsy Original
+                  </p>
+                  <figure class="product-image">
+                    <img src="./images/PR-2.webp" alt="" />
+                  </figure>
+                  <p class="product-price">29.95</p>
+                  <ul class="product-features">
+                    <li>9 Natuurlijke geluiden</li>
+                    <li>Blauw ademend licht</li>
+                    <li>Tot 12 uur non-stop spelen</li>
+                    <li>Batterij tot 36 uur mee</li>
+                    <li>Ophangbaar</li>
+                    <li>Draadloos</li>
+                    <li>(Continue) Timer</li>
+                    <li>60 Decibel</li>
+                  </ul>
+                  <div class="product-button">
+                    <a href="#" class="button button-rounded text-black  button-primary"
+                      >Bekijk Original</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="product-item">
+                  <p class="h3 title-secondary mt-3 mb-3 text-center">
+                    Numsy Original
+                  </p>
+                  <figure class="product-image">
+                    <img src="./images/PR-3.webp" alt="" />
+                  </figure>
+                  <p class="product-price">29.95</p>
+                  <ul class="product-features">
+                    <li>9 Natuurlijke geluiden</li>
+                    <li>Blauw ademend licht</li>
+                    <li>Tot 12 uur non-stop spelen</li>
+                    <li>Batterij tot 36 uur mee</li>
+                    <li>Ophangbaar</li>
+                    <li>Draadloos</li>
+                    <li>(Continue) Timer</li>
+                    <li>60 Decibel</li>
+                  </ul>
+                  <div class="product-button">
+                    <a href="#" class="button button-rounded text-black  button-primary"
+                      >Bekijk Original</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="what-we-do-cloud rotate-devider p-products-cloud-devider p-products-cloud-devider-bottom p-products-cloud-devider-white"
+      ></div>
+
+      <div class="cloudy-section p-products-section">
+
+        <div class="cloudy-section-inner pt-0">
+          <div class="products-block golden-gradient">
+            <div class="dots-bg-wrapper">
+              <div class="dots-1 dots"></div>
+              <div class="dots-2 dots"></div>
+              <div class="dots-3 dots"></div>
+            </div>
+            <div class="container products-block-pr">
+              <h3 class="h2 text-center">Slapend onderweg</h3>
+              <div class="products-block-copy text-center text-big">
+                <p>
+                  In deze categorie delen we graag ons assortiment "Dromend
+                  onderweg". Deze modellen zijn uiterst gebruiksvriendelijk,
+                  natuurlijk draadloos en makkelijk om mee te nemen. Een
+                  bijkomend voordeel van al deze apparaten zijn dat de batterij
+                  langdurig meegaat én dat je ze kunt ophangen aan bijvoorbeeld
+                  de wieg, buggy, deurklink of aan je arm.
+                </p>
+              </div>
+
+              <div class="row products-block-grid">
+                <div class="col-md-4">
+                  <div class="product-item">
+                    <p class="h3 title-secondary mt-3 mb-3 text-center">
+                      Numsy Original
+                    </p>
+                    <figure class="product-image">
+                      <img src="./images/PR-1.jpg" alt="" />
+                    </figure>
+                    <p class="product-price">29.95</p>
+                    <ul class="product-features">
+                      <li>9 Natuurlijke geluiden</li>
+                      <li>Blauw ademend licht</li>
+                      <li>Tot 12 uur non-stop spelen</li>
+                      <li>Batterij tot 36 uur mee</li>
+                      <li>Ophangbaar</li>
+                      <li>Draadloos</li>
+                      <li>(Continue) Timer</li>
+                      <li>60 Decibel</li>
+                    </ul>
+                    <div class="product-button">
+                      <a href="#" class="button button-rounded text-black  button-primary"
+                        >Bekijk Original</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="product-item">
+                    <p class="h3 title-secondary mt-3 mb-3 text-center">
+                      Numsy Original
+                    </p>
+                    <figure class="product-image">
+                      <img src="./images/PR-2.webp" alt="" />
+                    </figure>
+                    <p class="product-price">29.95</p>
+                    <ul class="product-features">
+                      <li>9 Natuurlijke geluiden</li>
+                      <li>Blauw ademend licht</li>
+                      <li>Tot 12 uur non-stop spelen</li>
+                      <li>Batterij tot 36 uur mee</li>
+                      <li>Ophangbaar</li>
+                      <li>Draadloos</li>
+                      <li>(Continue) Timer</li>
+                      <li>60 Decibel</li>
+                    </ul>
+                    <div class="product-button">
+                      <a href="#" class="button button-rounded text-black  button-primary"
+                        >Bekijk Original</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="product-item">
+                    <p class="h3 title-secondary mt-3 mb-3 text-center">
+                      Numsy Original
+                    </p>
+                    <figure class="product-image">
+                      <img src="./images/PR-3.webp" alt="" />
+                    </figure>
+                    <p class="product-price">29.95</p>
+                    <ul class="product-features">
+                      <li>9 Natuurlijke geluiden</li>
+                      <li>Blauw ademend licht</li>
+                      <li>Tot 12 uur non-stop spelen</li>
+                      <li>Batterij tot 36 uur mee</li>
+                      <li>Ophangbaar</li>
+                      <li>Draadloos</li>
+                      <li>(Continue) Timer</li>
+                      <li>60 Decibel</li>
+                    </ul>
+                    <div class="product-button">
+                      <a href="#" class="button button-rounded text-black  button-primary"
+                        >Bekijk Original</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="what-we-do-cloud p-products-cloud-devider p-products-cloud-devider-gold"
+      ></div>
+
+      <div class="power-section">
+        <div class="container">
+          <div class="row align-items-center power-section-grid">
+            <div class="col-md-7 power-left">
+              <h2 class="title-secondary text-center">
+                Benut de kracht van white noise
+              </h2>
+              <div class="text-center text-big">
+                <p>
+                  Doordat witte ruis prikkels van buitenaf filtert zul jij, of
+                  je kindje beter leren doorslapen. Dat komt omdat witte ruis de
+                  koppeling tussen de verschillende slaapfases verbetert. Deze
+                  slaapfases doorgaat ieder mens, jong en oud in zijn slaap.
+                  Veel pasgeborene hebben nog moeite met het aan elkaar koppelen
+                  van de verschillende slaapfases. Door witte ruis te gebruiken
+                  leert je kleine of jij dit met kleine stapjes beter te doen.
+                </p>
+                <p>
+                  <a href="#" class="button button-primary button-rounded text-black "
+                    >Bekijk witte ruis apparaten</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="col-md-5 power-right">
+              <img src="./images/MEET.webp" alt="" class="image" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="number-counter-section statistics curvy-section">
+        <div class="container text-center text-white">
+          <div class="row">
+            <div class="col-md-4">
+              <span class="animated-number"
+                ><span class="counter-value" data-count="12000"></span>+</span
+              >
+              <p class="icon-title">Duizenden tevreden dromers</p>
+            </div>
+            <div class="col-md-4">
+              <span class="animated-number"
+                ><span class="counter-value" data-count="7000"></span>+</span
+              >
+              <p class="icon-title">Per jaar totaal uur gewonnen slaap</p>
+            </div>
+            <div class="col-md-4">
+              <span class="animated-number"
+                ><span class="counter-value" data-count="1"></span>Week</span
+              >
+              <p class="icon-title">Slechts binnen 7 dagen resultaat</p>
+            </div>
+          </div>
+        </div>
+        <div class="curvy-area curvy-area-bottom"></div>
+      </div>
+
+      <div class="section-features">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="f-box">
+                <div class="f-icon">
+                  <img src="./images/F-1.webp" alt="" />
+                </div>
+                <div class="f-copy">
+                  <p class="f-title">Bewezen methode</p>
+                  <div class="f-text">
+                    <p>
+                      White noise heeft al voortreffelijke resultaten laten
+                      zien. 95% van onze dromers merkt binnen de eerste week al
+                      positieve veranderingen.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="f-box">
+                <div class="f-icon">
+                  <img src="./images/F-2.png" alt="" />
+                </div>
+                <div class="f-copy">
+                  <p class="f-title">Continue ontwikkeling</p>
+                  <div class="f-text">
+                    <p>
+                      Wij volgen altijd de laatste ontwikkelingen binnen de
+                      slaap- en baby sectoren. Die verwerken wij vervolgens in
+                      onze producten.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="f-box">
+                <div class="f-icon">
+                  <img src="./images/F-3.webp" alt="" />
+                </div>
+                <div class="f-copy">
+                  <p class="f-title">Gecertificeerd</p>
+                  <div class="f-text">
+                    <p>
+                      Al onze witte ruis apparaten zijn met liefde uitgezocht en
+                      zijn gecertificeerd met CE en RoHs keurmerken.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ask-experts">
+        <div class="container">
+          <h2 class="text-center text-white h3 title-secondary mt-0 mb-0">
+            Kom je er zelf niet helemaal uit? Vraag het onze experts!
+          </h2>
+        </div>
+      </div>
+
+      <div
+        class="what-we-do-cloud ask-experts-devider-bottom rotate-devider"
+      ></div>
+
+      <div class="benefits">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="f-box">
+                <div class="f-icon">
+                  <img src="./images/B-1.png" alt="" />
+                </div>
+                <div class="f-copy">
+                  <p class="f-title">Doeltreffend te werk</p>
+                  <div class="f-text">
+                    <p>
+                      Aan de hand van jouw vragen kunnen we gerichte antwoorden
+                      geven om zo effectief mogelijk te werk te gaan.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="f-box">
+                <div class="f-icon">
+                  <img src="./images/B-2.png" alt="" />
+                </div>
+                <div class="f-copy">
+                  <p class="f-title">Toekomstgerichte visie</p>
+                  <div class="f-text">
+                    <p>
+                      Wij zijn niet van het korte termijn denken maar leggen je
+                      precies uit hoe jij, ook op lange termijn, het meeste uit
+                      jouw product haalt.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="f-box">
+                <div class="f-icon">
+                  <img src="./images/B-3.png" alt="" />
+                </div>
+                <div class="f-copy">
+                  <p class="f-title">Altijd klaar voor jou</p>
+                  <div class="f-text">
+                    <p>
+                      Geen zorgen, je staat er nooit alleen voor. Ons dream team
+                      staat altijd klaar voor al jouw vragen.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="f-box">
+                <div class="f-icon">
+                  <img src="./images/B-4.png" alt="" />
+                </div>
+                <div class="f-copy">
+                  <p class="f-title">Gedetailleerd stappenplan</p>
+                  <div class="f-text">
+                    <p>
+                      Een effectief stappenplan hoe je white noise op- en af kan
+                      bouwen zodat ook jij normaal kunt slapen.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="f-box">
+                <div class="f-icon">
+                  <img src="./images/B-5.png" alt="" />
+                </div>
+                <div class="f-copy">
+                  <p class="f-title">Voorkom keuzestress</p>
+                  <div class="f-text">
+                    <p>
+                      Houd je niet van te veel keuze aan producten? Geen zorgen,
+                      aan de hand van jouw persoonlijke situatie en wensen geven
+                      we je graag advies.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="f-box">
+                <div class="f-icon">
+                  <img src="./images/B-6.png" alt="" />
+                </div>
+                <div class="f-copy">
+                  <p class="f-title">Uitleg over slaap en meer</p>
+                  <div class="f-text">
+                    <p>
+                      Ons dream team geeft je graag extra uitleg over slaap en
+                      waarom slaap zo belangrijk is.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ask-experts">
+        <div class="container">
+          <h2 class="text-center text-white h3 title-secondary mt-0 mb-0">
+            Krijg direct advies van onze droom experts
+          </h2>
+          <p class="text-center mt3">
+            <a href="#" class="button button-primary button-rounded text-black  button-huge"
+              >Vraag onze experts</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <footer id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 footer-col footer-col-1">
+              <div class="footer-col-inner">
+                <h5 class="title-primary h3">Informatie</h5>
+
+                <ul class="footer-quick-links">
+                  <li><a href="#">Over Numsy</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Distribiteur</a></li>
+                  <li><a href="#">Kennisbank</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 footer-col footer-col-2">
+              <div class="footer-col-inner">
+                <h5 class="title-primary h3">Support</h5>
+
+                <ul class="footer-quick-links">
+                  <li><a href="#">Contact ons</a></li>
+                  <li><a href="#">Verzendbeleid</a></li>
+                  <li><a href="#">Restitutiebeleid</a></li>
+                  <li><a href="#">Affiliate programma</a></li>
+                  <li><a href="#">Retourneren</a></li>
+                  <li><a href="#">Disclaimer</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 footer-col footer-col-3">
+              <div class="footer-col-inner">
+                <h5 class="title-primary h3">Adres</h5>
+
+                <ul class="location-links">
+                  <li><i class="fa fa-building"></i> Numsy</li>
+                  <li><i class="fa fa-home"></i> Strevelsweg 700</li>
+                  <li><i class="fa fa-map-marker"></i> 3083AS Rotterdam</li>
+                  <li>
+                    <i class="fa fa-phone"></i>
+                    <a href="tel:31651956654">+31 6 51956654</a>
+                  </li>
+                  <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:info@numsy.nl">info@numsy.nl</a>
+                  </li>
+                  <li><i class="fa fa-briefcase"></i> KvK nummer: 75123193</li>
+                  <li>
+                    <i class="fa fa-certificate"></i> BTW nummer: NL860151906B01
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-secondary">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-md-4">
+                <p class="footer-copyright">2021 © Numsy</p>
+              </div>
+              <div class="col-md-4">
+                <ul class="footer-social">
+                  <li>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-youtube"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <form class="footer-search">
+                  <input type="search" placeholder="Zoeken.." name="s" />
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="./js/app.js"></script>
+</html>

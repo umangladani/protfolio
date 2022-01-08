@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'GaramondPremrPro';
+    src: url(../font/GaramondPremrPro.otf);
+  }
+
+@font-face{
+  font-family: 'BeautifulBloom';
+  src: url(../font/BeautifulBloom-Regular.otf);
+}  
+
+@font-face{
+  font-family: 'GaramondPremrPro-semibold';
+  src: url(../font/GaramondPremrPro-Smbd.otf);
+}  

@@ -1,0 +1,58 @@
+.text-big {
+  font-size: 1.8rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-black {
+  color: black !important;
+}
+
+svg {
+  max-height: 100%;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.text-brand {
+  color: var(--green);
+}
+
+.text-big {
+  font-size: 2rem;
+}
+
+.image {
+  max-width: 100%;
+  display: block;
+}
+
+.pt50 {
+  padding-top: 50px;
+}
+
+.rotate-devider {
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 991px) {
+  .text-center-mobile {
+    text-align: center;
+  }
+}

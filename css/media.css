@@ -1,0 +1,214 @@
+
+
+@media (max-width: 1281px) {
+  
+
+  
+}
+
+@media (max-width: 1025px){
+  
+    .chart{
+        width: 175px !important;
+        height: 175px !important;
+    }
+
+    .chart canvas{
+        width: 175px !important;
+        height: 175px !important;
+    }
+
+    .chart img{
+        width: 75px !important;
+        
+    }
+
+  
+}
+
+
+@media (max-width: 991px) {
+
+    
+
+    .chart img{
+        width: 50px !important;
+        
+    }
+
+  
+}
+
+
+@media (max-width: 768px) {
+
+    section {
+        padding: 50px 0;
+    }
+
+
+    .mouse-cursor {
+        display: none;
+    }
+
+    .site-nav a {
+        width: 100%;
+    }
+   
+    .about-image {
+        margin-bottom: 3rem;
+        width: 50%;
+        margin: 0 0 02rem 0px;
+    }
+
+    .site-header {
+        transform: translateY(-98%);
+    }
+
+    .social-icon {
+        bottom: 10rem;
+        display: flex;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .chart{
+        width: 125px !important;
+        height: 125px !important;
+    }
+
+    .chart canvas{
+        width: 125px !important;
+        height: 125px !important;
+    }
+
+    .skill-title {
+        font-size: 1.2rem;
+    }
+
+    .skill-main-title{
+        margin-bottom: 3rem;
+      }
+      .project-name {
+        font-size: 1.2rem;
+      }  
+     
+
+}
+
+@media (max-width: 576px) {
+
+    .about-image {
+        margin-bottom: 3rem;
+        width: 75%;
+        margin:0 auto 2rem auto;
+    }
+
+    .title{
+        font-size: 2.4rem;
+    }
+   
+    .d-block-sm{
+        display: block !important;
+    }
+
+    .scroll-sm-show::-webkit-scrollbar{
+        display: inherit;
+      
+      }
+
+    .education-percentage {
+        text-align: left;
+    }
+
+    .chart{
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .chart canvas{
+        width: 200px !important;
+        height: 200px !important;
+    }
+    .skill-title {
+        font-size: 1.4rem;
+    }
+
+    .project-item {
+        width: 100%;
+      }
+
+     
+
+    .project-link a{
+        margin-bottom: 1.6rem;
+        margin-top: 1rem;
+    }
+
+    .socil-contact a i {
+        margin-top: 30px;
+    }
+      
+}
+
+
+@media (max-width: 480px) {
+  
+    .profile {
+        width: 100%;
+    }
+
+    .profile-name span {
+        opacity: 0.5;
+        font-family: 'Londrina Outline', cursive;
+    }
+
+    .profile-text {
+        color: #ffffff;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .social-icon {
+        bottom: 5rem;
+        display: flex;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .slider-hello {
+        font-size: 2.8rem;
+    }
+
+    .slider-section {
+        position: relative;
+        height: 90vh;
+    }
+
+    .about-image {
+        margin-bottom: 3rem;
+        width: 100%;
+        margin: 0 0 02rem 0px;
+    }
+
+    .chart{
+        width: 175px !important;
+        height: 175px !important;
+    }
+
+    .chart canvas{
+        width:175px !important;
+        height: 175px !important;
+    }
+
+    .chart img{
+        width: 50px !important;
+        
+    }
+  
+}
+
+@media (max-width: 320px) {
+  
+
+}

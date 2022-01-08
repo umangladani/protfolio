@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500&family=Libre+Baskerville&family=Quicksand:wght@400;500&family=Roboto:wght@400;700&display=swap');
+
+@import './global/vars.css';
+@import './global/base.css';
+@import './global/type.css';
+@import './global/utility.css';
+@import './global/padding.css';
+@import './global/margin.css';
+@import './global/background-effect.css';
+
+@import './common/button.css';
+@import './common/header.css';
+@import './common/footer.css';
+@import './common/progress-bar.css';
+
+@import './home/hero.css';
+@import './home/home-4-block.css';
+@import './home/home-intro.css';
+@import './home/home-clients.css';
+@import './home/home-products.css';
+@import './home/home-testimonial.css';
+@import './home/home-dream-shop.css';
+@import './home/home-dreamer.css';
+@import './home/home-book.css';
+@import './home/home-search.css';
+@import './home/home-reviews.css';
+@import './home/home-history.css';
+
+@import './common/inner-page.css';
+@import './common/slick.css';
+
+@import './about/about-1.css';
+@import './about/about-2.css';
+@import './about/about-3.css';
+@import './about/about-4.css';
+@import './about/about-5.css';
+@import './about/about-6.css';
+
+@import './products/products-1.css';
+@import './products/power.css';
+@import './products/statistics.css';
+@import './products/features.css';
+@import './products/ask-experts.css';
+@import './products/benefits.css';
+
+@import './affiliate/affiliate-1.css';
+@import './affiliate/affiliate-2.css';
+@import './affiliate/affiliate-3.css';
+@import './affiliate/affiliate-4.css';
+@import './affiliate/affiliate-5.css';
+@import './affiliate/affiliate-6.css';
+@import './affiliate/affiliate-7.css';
+@import './affiliate/affiliate-8.css';
+@import './affiliate/affiliate-9.css';
+@import './affiliate/affiliate-10.css';
+@import './affiliate/affiliate-11.css';
+
+@import './single-product/single-product-hero.css';
+@import './single-product/single-product_product.css';
+@import './single-product/single-product-boxes.css';
+@import './single-product/single-product-details.css';
+@import './single-product/single-product-buy-bottom.css';
+/* @import './single-product/mfp-gallary.css'; */
+@import './single-product/lightbox.css';
+@import './single-product/light-box-gallary.css';
+
+@import './vendor/auto-type.css';

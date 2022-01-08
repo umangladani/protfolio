@@ -1,0 +1,24 @@
+.FAQ-Section {
+    background: #ffffff;
+    padding: 0 0  50px 0;
+}
+
+@media only screen and (max-width: 767px)  {
+    .FAQ-Section {
+        padding: 25px 0;
+    }
+}
+
+.FAQ-title {
+    font-weight: 700;
+}
+
+.question {
+    margin-bottom: 1rem;
+    font-size: 2.1rem;
+}
+
+.endline {
+    display: flex;
+    align-items: flex-end;
+}

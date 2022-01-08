@@ -1,0 +1,113 @@
+.products-section .cloud-area {
+  background: var(--cream);
+}
+
+.products-section .cloudy-section-inner {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.products-section .cloudy-section-inner {
+  background: var(--cream);
+  background: linear-gradient(
+    to bottom,
+    var(--cream) 0%,
+    var(--lightGreen) 100%
+  );
+}
+
+.home-products {
+  margin-top: 10rem;
+}
+
+.home-product-box {
+  border: 4px solid white;
+  background: var(--green);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.hpb-pricing {
+  width: 14rem;
+  height: 14rem;
+  border: 4px solid white;
+  border-radius: 50%;
+  margin: -7rem auto 0;
+  background: var(--priceGreen);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+}
+
+.hpb-name,
+.hpb-best-seller {
+  font-weight: 700;
+  color: white;
+  font-size: 2.2rem;
+  margin: 1rem 0 0;
+  padding: 5px 0;
+}
+
+.hpb-stars {
+  margin: 0;
+  padding: 5px 0;
+  background: var(--starsGreen);
+}
+
+.hpb-stars .five-starts-system {
+  display: block;
+  height: 18px;
+  margin: 5px auto;
+  width: 102px;
+}
+
+.hpb-best-seller {
+  background: var(--bestSellerGreen);
+  font-weight: normal;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.hpb-image {
+  background: white;
+  width: 100%;
+  padding: 2rem 1.5rem 2rem;
+  margin: 0;
+}
+
+.hpb-image img {
+  width: 90%;
+  max-width: 150px;
+}
+
+.hpb-product-title {
+  margin: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: white;
+  line-height: 1.3;
+}
+
+.hpb-link {
+  background: white;
+  padding: 2rem 1rem;
+}
+
+@media screen and (max-width: 991px) {
+  .home-products-container {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home-products-container {
+    max-width: 400px;
+  }
+
+  .home-products > div + div {
+    margin-top: 80px;
+  }
+}

@@ -1,0 +1,17 @@
+.ask-experts {
+  background: var(--green);
+  padding-top: 8rem;
+  padding-bottom: 7rem;
+}
+
+.ask-experts h2 {
+  font-size: 3.4rem;
+}
+
+.ask-experts-devider-bottom {
+  background: var(--green);
+}
+
+.ask-experts-devider-bottom:after {
+  background: white;
+}

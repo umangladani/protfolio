@@ -1,0 +1,46 @@
+.Advantages-section {
+    background: #F5F5F5;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.Advantage-image {
+    height: 90px;
+    width: 90px;
+}
+
+.Advantages-title {
+    margin-bottom: 75px;
+}
+
+h2.text-center.Advantages-title.title-secondary.section-title.mt-0 {
+    font-weight: 400;
+}
+
+.affiliate-intro-section{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #fff;
+    position: relative;
+}
+
+@media only screen and (max-width: 767px)  {
+    .Advantages-section {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .Advantage-image {
+        margin: 0 auto;
+    }
+
+    h4.Advantage-sub-title {
+        text-align: center;
+        margin-top: 20px !important;
+    }
+
+    p.Advantage-contant.mt-1 {
+        font-size: 2.4rem;
+        text-align: center;
+    }
+}

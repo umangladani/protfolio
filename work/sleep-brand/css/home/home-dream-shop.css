@@ -1,0 +1,134 @@
+.dream-shop {
+  position: relative;
+}
+
+.dream-shop-inner {
+  margin-top: -40px;
+  margin-bottom: -40px;
+}
+
+.dream-shop-cloud-top {
+  min-width: 1665px;
+  position: relative;
+  top: -65px;
+  height: 65px;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-clip-path: url(#overlapping-clouds);
+  clip-path: url(#overlapping-clouds);
+  transform: rotateX(-180deg) scale(1.01);
+}
+
+.dream-shop-cloud-top:after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  background: white;
+  -webkit-clip-path: url(#overlapping-clouds);
+  clip-path: url(#overlapping-clouds);
+  width: 100%;
+  height: 100%;
+}
+
+.dream-shop-cloud-bottom {
+  position: relative;
+  bottom: -65px;
+  height: 65px;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-clip-path: url(#overlapping-clouds);
+  clip-path: url(#overlapping-clouds);
+  transform: scale(1.01);
+}
+
+.dream-shop-cloud-bottom:after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  background: white;
+  -webkit-clip-path: url(#overlapping-clouds);
+  clip-path: url(#overlapping-clouds);
+  width: 100%;
+  height: 100%;
+}
+
+.go-to-dream-shop .ds-middle img {
+  max-width: 220px;
+  margin: auto;
+  display: block;
+}
+
+.delivery-boxes {
+  margin-top: 5rem;
+}
+
+.delivery-box {
+  display: flex;
+}
+
+.delivery-box-icon {
+  width: 80px;
+}
+
+.delivery-box-icon img {
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+}
+
+.delivery-box-icon-2 img {
+  max-width: 60px;
+}
+
+.delivery-box-icon-3 img {
+  max-width: 60px;
+}
+
+.delivery-box-right {
+  padding-left: 20px;
+}
+
+.delivery-box-right .copy {
+  line-height: 1.4;
+}
+
+.delivery-box-right .text-brand {
+  font-weight: 700;
+}
+
+.row.align-items-center.go-to-dream-shop h2 {
+  text-align: left;
+}
+
+@media screen and (max-width: 991px) {
+  .row.align-items-center.go-to-dream-shop h2 {
+    text-align: center;
+  }
+  
+}
+
+
+@media screen and (max-width: 767px) {
+  .ds-left,
+  .ds-middle,
+  .ds-right {
+    min-width: 100%;
+  }
+
+  .go-to-dream-shop .ds-middle img {
+    display: block;
+    margin: 0;
+  }
+
+  .delivery-box-icon img {
+    margin: auto;
+    max-width: 60px;
+  }
+
+  .delivery-boxes .col-md-4 + .col-md-4 {
+    margin-top: 20px;
+  }
+
+  
+}
+

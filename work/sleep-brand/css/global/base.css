@@ -1,0 +1,28 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+body {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: var(--textColor);
+  font-weight: var(--robotoNormal);
+}
+
+body,
+.page-wrap {
+  overflow-x: hidden;
+}

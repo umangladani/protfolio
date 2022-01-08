@@ -1,0 +1,41 @@
+.all-dreamers {
+}
+
+.dreamer-box {
+  background: white;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dreamer-box > figure {
+  margin: 0;
+  padding: 0;
+}
+
+.dreamer-box > h3 {
+  margin: 0;
+  padding: 15px 15px 0;
+}
+
+.dreamer-copy {
+  padding: 15px;
+  line-height: 1.5;
+}
+
+.dreamer-footer {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 0.7rem 15px;
+  font-weight: 700;
+}
+
+.dreamer-more-button {
+  padding: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .all-dreamers > div + div {
+    margin-top: 20px;
+  }
+}

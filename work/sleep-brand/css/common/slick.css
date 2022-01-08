@@ -1,0 +1,39 @@
+.green-dots .slick-dots {
+  margin: 4rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.green-dots .slick-dots li {
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+
+.green-dots .slick-dots li + li {
+  margin-left: 5px;
+}
+
+.green-dots .slick-dots li.slick-active button {
+  background: var(--green);
+}
+
+.green-dots .slick-dots button {
+  padding: 0;
+  margin: 0;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--green);
+  background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 0;
+  outline: none;
+}

@@ -1,0 +1,20 @@
+.buy-bottom-section {
+    background: var(--green);
+    padding: 10rem 0 7.5rem;
+    position: relative;
+  }
+  
+  .buy-product-btn a {
+    margin: 0 5px;
+}
+
+.buy-bottom-section.curvy-section .curvy-area-single-page-bottom {
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMjgwIDE0MCcgcHJlc2VydmVBc3BlY3RSYXRpbz0nbm9uZSc+PHBhdGggZD0nTTEyODAuMiA3MHMtMjk1LjUtMTI2LjktMTI4MCA3MHYtMTQwaDEyODB2NzB6Jy8+PC9zdmc+");
+    mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMjgwIDE0MCcgcHJlc2VydmVBc3BlY3RSYXRpbz0nbm9uZSc+PHBhdGggZD0nTTEyODAuMiA3MHMtMjk1LjUtMTI2LjktMTI4MCA3MHYtMTQwaDEyODB2NzB6Jy8+PC9zdmc+");
+    position: absolute;
+    width: 100%;
+    background-color: #feffff;
+    height: 50px;
+    top: 0;
+}
+ 

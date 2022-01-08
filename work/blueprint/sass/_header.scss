@@ -1,0 +1,269 @@
+header{
+    
+    .top-header{
+        background: var(--color-primary-dark);
+        display: flex;
+        height: 4.55rem;
+        line-height: 4.5rem;
+        font-weight: 200;
+        color: var(--color-white-2);
+        font-size: 1.4rem;
+
+        a {
+            margin-right: 2rem; 
+            font-size: 1.2rem;
+            color: var(--color-white-2);
+        }
+    
+        .social-follow {
+            display: inline-flex;
+
+            @media only screen and (max-width: $bp-small) {
+                margin-left: 2rem;
+             }
+
+            & i:hover{
+                color: var(--color-secondary);
+            }
+         }
+
+         .address {
+            display: inline-flex;
+            float: right; 
+
+            i{
+
+                &:hover{
+                    color: var(--color-secondary);
+                }
+            }
+
+            .address-text {
+                opacity: 0.6;
+                font-weight: 500;
+                
+                @media only screen and (max-width: $bp-small) {
+                    display: none;
+                }
+            }
+
+            i {
+                line-height: 4.5rem;
+                margin-right: 1rem; 
+
+                @media only screen and (max-width: $bp-small) {
+                    display: none;
+                }
+            }
+
+            .apply-btn{
+                background: var(--color-secondary);
+                padding: 0 4rem;
+                margin-left: 2rem;
+                height: 100%;
+                display: inline-block;
+
+                @media only screen and (max-width: 960px) {
+                    padding: 0.05rem 4rem;
+                }
+
+                a{
+                    color: var(--color-primary-dark);
+                    text-decoration: none;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin: 0;
+                }
+            }
+        }
+    
+    }
+
+    .main-header {
+        height: 10rem;
+
+        @media only screen and (max-width: $bp-small) {
+           height: 16rem;
+        }
+
+        .logo{
+            width: 125%;
+
+            @media only screen and (max-width: 37.5em){
+
+                width: 100%;
+            }
+
+            a{
+                height: 7.5rem;
+                margin: auto 0;
+                align-items: center;
+                display: flex;
+
+                img{
+                    margin: 0 -1.5rem 0;
+
+                    @media only screen and (max-width: $bp-small) {
+                        height: 75%;
+                        margin: 0 auto;
+                        width: 45%;
+
+                    }
+                }
+            }
+        }
+        
+
+        .contact {
+            display: flex;
+            align-items: center;
+            height: 6.5rem;
+            float: right;
+            height: 100%;
+
+            @media only screen and (max-width: $bp-small) {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+             }
+           
+        
+            &-info{
+                display: flex;
+                align-items: center;
+
+                .contact-icon {
+                    margin: 0 1rem 0 2rem;
+                    padding: 0.25rem;
+                    text-align: center;
+                    border: 0.2rem solid var(--color-blue);
+                    height: 3.5rem;
+                    width: 3.5rem;
+                    border-radius: 0.4rem;
+                    color: var(--color-blue);
+
+                   &:hover{
+                       background: var(--color-blue);
+                   }
+
+                   &:hover i{
+                    color: var(--color-white);
+                    }
+                }
+
+                .contact-type {
+                    font-size: 1.8rem;
+                    color: var(--color-black);
+                    font-weight: 700;
+                    margin: 0;
+                    height: 2rem;
+                }
+
+                .contact-text {
+
+
+                    a {
+                        font-size: 1.4rem;
+                        color: var(--color-grey-3);
+                        font-weight: 600;
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+
+    .menu{
+        background: var(--color-blue);
+        width: 100%;
+        border-radius: 0.4rem;
+        text-align: center;
+        z-index: 5;
+
+        ul{
+            display: inline-flex;
+
+            li{
+                list-style: none;
+                padding: 1rem 2rem;
+                position: relative;
+
+                a{
+                    color: var(--color-white);
+                    font-weight: 400;
+                    opacity: 0.8;
+                }
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    transition: 0.2s ;
+                    height: 0.4rem;
+                    border-radius: 0.5rem;
+                    background: var(--color-white);
+                    bottom: 5%;
+                    left: 50%;
+                    transform: translate(-50%, -100%);
+                    opacity: 0;
+                }
+                
+                &:hover::before{
+                    width: 1.5rem;
+                    opacity: 1;
+                }
+            }
+
+            .drop-down{
+                color: var(--color-white);
+                font-weight: 400;
+                opacity: 0.8;
+                position: relative;
+
+                i {
+                    margin-left: 0.4rem;
+                }
+
+
+
+                .drop-down-item {
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 125%;
+                    background: var(--color-blue);
+                    width: 100%;
+                    opacity: 0;                  
+                    transition: 0.5s all;
+                    transition-delay: 0.2s;
+
+                    li{
+                        display: none;
+                        padding: 0;
+
+                        a{
+                            padding: 1rem 2rem;
+                            display: none;
+                        }
+                    }
+
+                    
+                }
+
+                &:hover .drop-down-item {
+                    opacity: 1;
+                    top: 100%;
+                }
+
+                &:hover .drop-down-item li{
+                    display: block;
+                }
+
+                &:hover .drop-down-item li a{
+                    display: block;
+                }
+            }
+        }
+    }
+}   

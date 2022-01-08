@@ -1,0 +1,25 @@
+.collaborate {
+  background: var(--green);
+  padding: 6rem 0 7rem;
+}
+
+.collaborate-copy {
+}
+
+.collaborate-image img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .collaborate-copy {
+    order: 2;
+  }
+
+  .collaborate-image img {
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+}

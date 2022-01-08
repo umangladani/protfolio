@@ -1,0 +1,9 @@
+.our-mission-section.curvy-section .curvy-area,
+.our-mission-section.curvy-section {
+  background: var(--green);
+}
+
+.our-mission-section .curvy-section-inner {
+  padding-top: 4rem;
+  padding-bottom: 14rem;
+}

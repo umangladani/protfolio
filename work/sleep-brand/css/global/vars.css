@@ -1,0 +1,21 @@
+:root {
+  --textColor: #333;
+  --robotoMedium: 500;
+  --robotoNormal: 400;
+  --quicksandBold: 700;
+  --quicksandNormal: 400;
+  --primaryColor: #ff9800;
+  --green: #009688;
+  --lightGreen: #a1d4d1;
+  --darkGreen: #025f64;
+  --grey: #eee;
+  --cream: #e8dbd3;
+  --headerHeight: 84px;
+
+  --priceGreen: #007268;
+  --starsGreen: #007268;
+  --bestSellerGreen: #004a43;
+
+  --starRatingColor: #e9ba26;
+  --starRatingGrey: #9b9b9b;
+}

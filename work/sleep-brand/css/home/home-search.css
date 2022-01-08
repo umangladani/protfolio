@@ -1,0 +1,75 @@
+.custom-search-section .curvy-section-inner {
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+}
+
+.custom-search {
+  max-width: 700px;
+  margin: auto;
+}
+
+.custom-search-group {
+  border: 2px solid var(--primaryColor);
+  display: flex;
+  border-radius: 100px;
+  overflow: hidden;
+  height: 55px;
+}
+
+.custom-search-group input {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  padding: 1rem 2rem;
+  border: 0;
+  flex: 1;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+.custom-search-group button {
+  background: var(--primaryColor);
+  color: inherit;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  width: 100px;
+}
+
+.custom-search-links {
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.custom-search-links li:before {
+  content: '\f101';
+  font-family: FontAwesome;
+  margin: 0 15px;
+}
+
+.custom-search-links li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.custom-search-links li a:hover,
+.custom-search-links li a:active,
+.custom-search-links li a:focus {
+  text-decoration: underline;
+}

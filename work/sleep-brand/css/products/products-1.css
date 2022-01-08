@@ -1,0 +1,154 @@
+.p-products-section {
+  background: #fff;
+
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(232, 219, 211, 1) 20%,
+    rgba(232, 219, 211, 1) 60%,
+    rgba(255, 255, 255, 1) 90%
+  );
+
+  position: relative;
+}
+
+.p-products-cloud-devider {
+  margin-top: -50px;
+  margin-bottom: -50px;
+}
+
+.p-products-cloud-devider-bottom {
+  top: -50px;
+  margin-top: 0;
+}
+
+.p-products-cloud-devider-white {
+  background: transparent;
+}
+
+.p-products-cloud-devider-white:after {
+  background: white;
+}
+
+.p-products-cloud-devider-gold {
+  background: white;
+}
+
+.p-products-cloud-devider-gold:after {
+  background: var(--cream);
+}
+
+.p-products-section-green {
+  background: var(--lightGreen);
+}
+
+.p-products-section .cloudy-section-inner {
+  padding-top: 5rem;
+  position: relative;
+}
+
+.p-products-section .p-products-section-inner {
+  padding-top: 0;
+  padding-bottom: 2rem;
+}
+
+.p-products-section .cloud-area {
+  background: #fff;
+}
+
+.p-big-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto 0;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  background: var(--textColor);
+  color: white;
+  text-align: center;
+}
+
+.p-big-icon i {
+  position: relative;
+  top: 2px;
+  left: 0;
+}
+
+.products-block {
+  padding-top: 2rem;
+  padding-bottom: 10rem;
+  position: relative;
+}
+
+.products-block-grid {
+  margin-top: 4rem;
+}
+
+@media screen and (max-width: 767px) {
+  .products-block-grid .col-md-4 + .col-md-4 {
+    margin-top: 20px;
+  }
+}
+
+.product-item {
+  height: 100%;
+  padding: 2rem 15px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.product-image img {
+  width: auto;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.product-price {
+  background: var(--grey);
+  padding: 15px;
+  text-align: center;
+  font-size: 2.8rem;
+  color: var(--primaryColor);
+  font-weight: 700;
+}
+
+.product-features {
+  margin: 0;
+  padding: 0 0 0 20px;
+  list-style: none;
+}
+
+.product-features li {
+  position: relative;
+  padding-left: 35px;
+}
+
+.product-features li:before {
+  font-family: 'FontAwesome';
+  font-weight: 900;
+  content: '\f00c' !important;
+  color: #6ea249;
+  font-size: inherit;
+  position: absolute;
+  left: 0;
+  line-height: inherit;
+}
+
+.product-button {
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+.products-block-pr {
+  position: relative;
+}

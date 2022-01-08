@@ -1,0 +1,20 @@
+.power-section {
+  padding-top: 12rem;
+  padding-bottom: 7rem;
+}
+
+.power-left h2 {
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 767px) {
+  .power-left {
+    order: 2;
+    text-align: center;
+  }
+
+  .power-right img {
+    max-width: 300px;
+    margin: 0 auto 20px;
+  }
+}

@@ -1,0 +1,49 @@
+.meet-section {
+}
+
+@media screen and (max-width: 991px) {
+  .meet-section .go-to-dream-shop {
+    align-items: flex-start !important;
+  }
+}
+
+.golden-gradient {
+  background-image: linear-gradient(0deg, var(--cream) 0%, #ffffff 100%);
+}
+
+.meet-section .golden-gradient {
+  padding-bottom: 6rem;
+}
+
+.meet-boxes {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.meet-boxes-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.meet-boxes img {
+  width: 80px;
+  max-width: 80px;
+}
+
+.copy-under-meet-boxes {
+  padding-bottom: 5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .meet-copy {
+    order: 2;
+    text-align: center;
+  }
+
+  .meet-image img {
+    max-width: 300px;
+    margin: auto;
+    display: block;
+    margin-bottom: 20px;
+  }
+}

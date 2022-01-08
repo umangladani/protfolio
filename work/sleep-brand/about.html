@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" class="sos-root">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SlaapOnderSterren</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body class="inner-page">
+    <svg class="clip-svg">
+        <clipPath id="cloud-path" clipPathUnits="objectBoundingBox">
+            <path
+                d="M0,0.312 S0.042,-0.007,0.077,0.41 c0,0,0.053,-0.639,0.096,0.107 c0,0,0.042,-0.361,0.073,-0.012 c0,0,0.05,-1.061,0.113,-0.102 c0,0,0.059,-0.49,0.097,0.129 c0,0,0.069,-1.055,0.139,0.154 c0,0,0.042,-0.624,0.087,-0.154 c0,0,0.034,-0.922,0.1,-0.226 c0,0,0.054,-0.313,0.084,0.191 c0,0,0.038,-0.344,0.086,0.081 c0,0,0.025,-0.257,0.048,-0.078 l0,0.502 H0 V0.312" />
+        </clipPath>
+    </svg>
+
+    <svg class="clip-svg">
+        <clipPath id="curvy-path" clipPathUnits="objectBoundingBox">
+            <path d="M0,0.011 v1 h1 V0.011 S0.443,0.64,0.336,0.64 S0,0.011,0,0.011"></path>
+        </clipPath>
+    </svg>
+
+    <svg class="clip-svg">
+        <clipPath id="overlapping-clouds" clipPathUnits="objectBoundingBox">
+            <path
+                d="M0,0.306 v-0.306 h1 c0,0,0,0.784,0,0.784 c-0.004,0.013,-0.008,0.022,-0.013,0.022 c-0.011,0,-0.022,-0.039,-0.03,-0.104 c-0.009,0.114,-0.023,0.185,-0.039,0.185 c-0.011,0,-0.022,-0.039,-0.03,-0.104 c-0.005,0.066,-0.012,0.11,-0.021,0.11 c-0.014,0,-0.025,-0.117,-0.025,-0.262 c0,-0.01,0,-0.021,0,-0.031 c-0.003,0.018,-0.007,0.028,-0.011,0.028 c-0.003,0,-0.007,-0.007,-0.01,-0.019 c-0.007,0.209,-0.026,0.36,-0.048,0.36 c-0.021,0,-0.039,-0.131,-0.046,-0.318 c-0.008,0.048,-0.016,0.075,-0.026,0.075 c-0.013,0,-0.025,-0.054,-0.034,-0.141 c-0.005,0.238,-0.025,0.416,-0.049,0.416 c-0.02,0,-0.037,-0.122,-0.046,-0.299 c-0.014,0.142,-0.034,0.229,-0.055,0.229 c-0.027,0,-0.05,-0.137,-0.065,-0.346 c-0.006,0.239,-0.027,0.417,-0.052,0.417 c-0.022,0,-0.042,-0.143,-0.05,-0.346 c-0.009,0.065,-0.019,0.103,-0.031,0.103 c-0.01,0,-0.019,-0.026,-0.027,-0.073 c-0.009,0.187,-0.027,0.316,-0.048,0.316 c-0.022,0,-0.041,-0.138,-0.049,-0.335 c-0.008,0.058,-0.019,0.091,-0.029,0.091 c-0.013,0,-0.024,-0.045,-0.033,-0.122 c-0.009,0.169,-0.027,0.284,-0.047,0.284 c-0.02,0,-0.037,-0.11,-0.046,-0.275 c-0.005,0.056,-0.011,0.091,-0.019,0.091 c-0.008,0,-0.02,-0.022,-0.02,-0.097 v-0.331,NaN E%3, C0 p, a0 t0 h0 d=', M1,0.306 v-0.306 h-1 c0,0,0,0.784,0,0.784 c0.004,0.013,0.008,0.022,0.013,0.022 c0.011,0,0.022,-0.039,0.03,-0.104 c0.009,0.114,0.023,0.185,0.039,0.185 c0.011,0,0.022,-0.039,0.03,-0.104 c0.005,0.066,0.012,0.11,0.021,0.11 c0.014,0,0.025,-0.117,0.025,-0.262 c0,-0.01,0,-0.021,0,-0.031 c0.003,0.018,0.007,0.028,0.011,0.028 c0.003,0,0.007,-0.007,0.01,-0.019 c0.007,0.209,0.026,0.36,0.048,0.36 c0.021,0,0.039,-0.131,0.046,-0.318 c0.008,0.048,0.016,0.075,0.026,0.075 c0.013,0,0.025,-0.054,0.034,-0.141 c0.005,0.238,0.025,0.416,0.049,0.416 c0.02,0,0.037,-0.122,0.046,-0.299 c0.014,0.142,0.034,0.229,0.055,0.229 c0.027,0,0.05,-0.137,0.065,-0.346 c0.006,0.239,0.027,0.417,0.052,0.417 c0.022,0,0.042,-0.143,0.05,-0.346 c0.009,0.065,0.019,0.103,0.031,0.103 c0.01,0,0.019,-0.026,0.027,-0.073 c0.009,0.187,0.027,0.316,0.048,0.316 c0.022,0,0.041,-0.138,0.049,-0.335 c0.008,0.058,0.019,0.091,0.029,0.091 c0.013,0,0.024,-0.045,0.033,-0.122 c0.009,0.169,0.027,0.284,0.047,0.284 c0.02,0,0.037,-0.11,0.046,-0.275 c0.005,0.056,0.011,0.091,0.019,0.091 c0.008,0,0.02,-0.022,0.02,-0.097 v-0.331">
+            </path>
+        </clipPath>
+    </svg>
+
+    <div class="page-wrap">
+        <header id="top-header">
+            <div class="container">
+                <div class="row top-header-row">
+                    <div class="col top-logo">
+                        <a href="#">
+                            <img src="./images/LOGO.webp" alt="" />
+                        </a>
+                    </div>
+                    <nav class="col top-nav">
+                        <ul>
+                            <li><a href="#">Over ons</a></li>
+                            <li class="has-children">
+                                <a href="#">Our Products</a>
+                                <ul>
+                                    <li><a href="#">Werking</a></li>
+                                    <li><a href="#">Voor Baby's & Kinderen</a></li>
+                                    <li><a href="#">Voor Volwassenen</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Droomshop</a></li>
+                            <li class="has-children">
+                                <a href="#">Contact</a>
+                                <ul>
+                                    <li><a href="#">Partners</a></li>
+                                    <li><a href="#">Bericht ons</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-only mobile-store-cta button-importent">
+                                <a href="#" class="">Store</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="col top-cta">
+                        <button class="mobile-only mobile-nav-toggle">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a href="#" class="button button-primary button-shadow button-small desktop-only button-importent">Store</a>
+                    </div>
+                </div>
+            </div>
+            <div id="progress-bar">
+                <i class="fa fa-star" id="progress-bar-icon"></i>
+            </div>
+        </header>
+
+        <div id="home-hero" style="background-image: url(./images/SLIDER-2.webp)">
+            <div class="container">
+                <div class="hero-copy">
+                    <h1 class="text-white text-right hero-title mb2">Ontmoet Numsy</h1>
+                    <div class="text-big text-right text-white hero-subtitle mb3 auto-type">
+                        <div class="text-js">
+                            Expert in white noise, jouw partner voor rust
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cloudy-section">
+            <div class="cloud-area"></div>
+            <div class="cloudy-section-inner py-5">
+                <div class="container">
+                    <div class="row number-counter-section">
+                        <div class="col-md-4 hero-4-block">
+                            <div class="icon-box">
+                                <span class="animated-number"><span class="counter-value"
+                                        data-count="11000"></span>+</span>
+                                <p class="icon-title">Kinderen geholpen aan betere slaap</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 hero-4-block">
+                            <div class="icon-box">
+                                <span class="animated-number"><span class="counter-value"
+                                        data-count="4500"></span>+</span>
+                                <p class="icon-title">Volwassenen slapen en werken beter</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 hero-4-block">
+                            <div class="icon-box">
+                                <span class="animated-number"><span class="counter-value"
+                                        data-count="2100"></span>+</span>
+                                <p class="icon-title">Bomen geplant door onze dromers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="curvy-section our-mission-section">
+            <div class="curvy-area"></div>
+            <div class="curvy-section-inner">
+                <div class="container">
+                    <h2 class="text-center text-white section-title title-secondary mt-4">
+                        Onze missie
+                    </h2>
+                    <div class="text-white text-center">
+                        <p>
+                            Een te groot deel van de wereld worstelt met slaap wat negatieve
+                            gevolgen heeft op het dagelijks leven. Onze missie is om zoveel
+                            mogelijk mensen, jong en oud, een positieve relatie met slaap op
+                            te bouwen. Door de juiste mensen bij elkaar te brengen, kennis
+                            te delen en door innovatieve en duurzame oplossingen te creëren
+                            kan iedereen zelfstandig kan leren slapen. Door het leven van
+                            andere mensen op een positieve manier te veranderen, behalen we
+                            met zijn allen succes. Onze prioriteit zal altijd zijn om
+                            anderen dit doel helpen te bereiken.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dream-shop meet-section">
+            <div class="dream-shop-cloud-top"></div>
+            <div class="container dream-shop-inner">
+                <div class="row align-items-center go-to-dream-shop">
+                    <div class="col-md-7 meet-copy">
+                        <h2 class="title-secondary">Ontmoet Numsy</h2>
+                        <p>
+                            Leuk dat je meer over ons wil leren. Numsy heeft namelijk een
+                            missie. Wij willen jou weer laten dromen! Slaap is essentieel
+                            voor jong en oud. Daarom is het ook zo’n aangrijpend probleem
+                            wanneer het jou of je kleine niet lukt er van te genieten. Op
+                            deze manier word slaap steeds meer een obstakel, in plaats van
+                            iets om van te genieten.
+                        </p>
+                        <p>Maar, dit is echt nergens voor nodig….</p>
+
+                        <h3>Durf weer te dromen!</h3>
+                        <p>Slaap is iets wat elk lichaam zelf aan kan leren en waar we allemaal naar uit kunnen kijken.
+                            Onze oplossingen zijn daarom speels, interactief, duurzaam en bieden een natuurlijke manier
+                            om in slaap te komen. Wij geloven namelijk niet in medicatie of andere onnatuurlijke
+                            producten.
+                            <p>Wist je dat slaapproblemen vaak dichterbij zitten dan je denkt? Onze hersenen zijn
+                                s’nachts namelijk een stuk alerter dan we denken. Lichte slapers kunnen al van zachte
+                                prikkels wakker schrikken. Als je deze prikkels eruit zou kunnen filteren, zou de lichte
+                                slaper hier ongestoord doorheen kunnen slapen. Dit is precies waar de producten van
+                                Numsy voor zorgen. </p>
+                            <p>Dat komt omdat onze producten gebruik maken van witte ruis, dit zorgt niet alleen voor
+                                het blokkeren van de bovengenoemde prikkels. Maar heeft ook nog een kalmerend effect op
+                                baby’s.</p>
+
+                            <p>
+                                <a href="#" class="button button-primary button-rounded text-black" >Ontdek witte ruis</a>
+                            </p>
+                        </p>
+                    </div>
+                    <div class="col-md-5 meet-image">
+                        <img src="./images/MEET.png" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="golden-gradient">
+                <div class="container">
+                    <div class="row delivery-boxes meet-boxes">
+                        <div class="col-md-4">
+                            <div class="delivery-box">
+                                <span class="delivery-box-icon delivery-box-icon-1">
+                                    <img src="./images/MEET-1.png" alt="">
+                                </span>
+                                <div class="delivery-box-right">
+                                    <p class="meet-boxes-title title-primary mt-0 mb-2">Experts in white noise</p>
+                                    <p class="copy">Wij zijn er voor al jouw vragen</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="delivery-box">
+                                <span class="delivery-box-icon delivery-box-icon-2">
+                                    <img src="./images/MEET-2.png" alt="">
+                                </span>
+                                <div class="delivery-box-right">
+                                    <p class="meet-boxes-title title-primary mt-0 mb-2">Wetenschappelijk onderbouwd</p>
+                                    <p class="copy">Een product waar slaapcoaches ook achter staan!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="delivery-box">
+                                <span class="delivery-box-icon delivery-box-icon-3">
+                                    <img src="./images/MEET-3.png" alt="">
+                                </span>
+                                <div class="delivery-box-right">
+                                    <p class="meet-boxes-title title-primary mt-0 mb-2">Met elkaar, voor elkaar</p>
+                                    <p class="copy">Samen met jou en onze experts gaan we voor jouw beste slaapervaring</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copy-under-meet-boxes">
+                        <h2 class="text-center">Met elkaar, voor elkaar</h2>
+                        <p class="text-center">
+                            Door steeds meer newborns, kinderen en ouderen te helpen met hun slaapprobleem komen wij allemaal een stukje dichterbij ons doel: beter slapen. Dit doen wij natuurlijk niet alleen. Wij werken samen met slaapcoaches en experts uit verschillende landen. Zij delen hun kennis en ervaringen zodat wij dit terug kunnen vertalen naar onze dierbare leden. Jullie staan bij ons centraal. Wij luisteren en denken met onze dromers mee. Hierdoor creëren wij de ideale slaapwereld – met elkaar, voor elkaar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="what-we-do">
+            <div class="what-we-do-shape"></div>
+            <div class="container">
+                <h2 class="text-white text-center mb4">Wat doen wij?</h2>
+                <div class="row what-we-do-grid">
+                    <div class="col-md-4">
+                        <div class="what-we-do-box">
+                            <figure class="wwdb-image">
+                                <img src="./images/W-1.jpeg" alt="">
+                            </figure>
+                            <h3 class="wwdb-title">Onze producten</h3>
+                            <div class="wwdb-copy">
+                                <p>Ons assortiment is groot en bevat witte ruis machines, slaaptrainers en andere slaaphulpen. Een kijkje nemen in onze droomshop?</p>
+                            </div>
+                            <div class="wwdb-footer">
+                                <a href="#" class="button button-primary button-small button-rounded text-black">Bekijk droomshop</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="what-we-do-box">
+                            <figure class="wwdb-image">
+                                <img src="./images/W-2.jpg" alt="">
+                            </figure>
+                            <h3 class="wwdb-title">Steunen van goede doelen</h3>
+                            <div class="wwdb-copy">
+                                <p>Wist je dat wij ook steun bieden aan goede doelen? Met hulp van onze leden werken we samen aan een betere toekomst. Benieuwd welke doelen wij steunen?</p>
+                            </div>
+                            <div class="wwdb-footer">
+                                <a href="#" class="button button-primary button-small button-rounded text-black">Bekijk droomshop</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="what-we-do-box">
+                            <figure class="wwdb-image">
+                                <img src="./images/W-3.jpg" alt="">
+                            </figure>
+                            <h3 class="wwdb-title">Experts in white noise en meer</h3>
+                            <div class="wwdb-copy">
+                                <p>We investeren in witte ruis onderzoeken om slaapproblemen nog beter te tackelen. Ook werken we samen met allerlei experts op het gebied van slaap.</p>
+                            </div>
+                            <div class="wwdb-footer">
+                                <a href="#" class="button button-primary button-small button-rounded text-black">Bekijk droomshop</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="what-we-do-cloud"></div>
+
+        <div class="what-dreamers">
+            <div class="container">
+                <h2 class="text-center mb4">Wat zeggen onze dromers?</h2>
+                <div class="what-dreamers-list green-dots">
+                    <div class="what-dreamer-item">
+                        <div class="wdi-copy">
+                            <p>"Heeft me heel goed geholpen bij mijn kindje haar dutjes. Ook voor mezelf vind ik dit handig om te kunnen slapen. Je slaapt er beter van! Ook heel compact dus ideaal om mee te nemen als je met je gezin elders slaapt."</p>
+                        </div>
+                        <div class="wdi-footer">
+                            <img src="./images/D-1.png" alt="">
+                            Naomi
+                        </div>
+                    </div>
+                    <div class="what-dreamer-item">
+                        <div class="wdi-copy">
+                            <p>"Dit is voor ons echt een uitkomst! Onze dochter van 3 maanden en zoontje van bijna 2 werden altijd rustig als ik aan het stofzuigen was oid. Maar dit is veel beter: makkelijk in gebruik, handig om mee te nemen. Mijn dochtertje dommelt dankzij Numsy rustig in en slaapt heerlijk!"</p>
+                        </div>
+                        <div class="wdi-footer">
+                            <img src="./images/D-2.png" alt="">
+                            Rianne
+                        </div>
+                    </div>
+                    <div class="what-dreamer-item">
+                        <div class="wdi-copy">
+                            <p>"Super tevreden van! Wij zitten met een baby die heel moeilijk in slaap valt. Ook overdag slapen is echt een drama. Sinds we de numsy gebruiken gaat het overdag al een stuk beter. Ze doet nu overdag goeie dutjes. Snachts gaat het ook al stuk beter qua slapen. Ook handig dat het zo compact is en we dit dus overal kunnen meenemen."</p>
+                        </div>
+                        <div class="wdi-footer">
+                            <img src="./images/D-3.png" alt="">
+                            Sandy
+                        </div>
+                    </div>
+                    <div class="what-dreamer-item">
+                        <div class="wdi-copy">
+                            <p>"Heeft me heel goed geholpen bij mijn kindje haar dutjes. Ook voor mezelf vind ik dit handig om te kunnen slapen. Je slaapt er beter van! Ook heel compact dus ideaal om mee te nemen als je met je gezin elders slaapt."</p>
+                        </div>
+                        <div class="wdi-footer">
+                            <img src="./images/D-1.png" alt="">
+                            Naomi
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="what-we-do-cloud what-dreamers-cloud"></div>
+
+        <div class="collaborate">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8 text-center collaborate-copy">
+                        <h3 class="title-secondary text-white h2">Samenwerken met ons?</h3>
+                        <p class="text-white text-big">Wil jij ons helpen aan een betere slaapwereld, een schoner milieu of een mooiere toekomst? Maak kennis met ons en wie weet werken we binnenkort samen!</p>
+                        <a href="#" class="button button-primary button-rounded text-black">Ga naar partnership pagina</a>
+                    </div>
+                    <div class="col-md-4 collaborate-image">
+                        <img src="./images/C1.png" alt="" class="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 footer-col footer-col-1">
+                        <div class="footer-col-inner">
+                            <h5 class="title-primary h3">Informatie</h5>
+
+                            <ul class="footer-quick-links">
+                                <li><a href="#">Over Numsy</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Distribiteur</a></li>
+                                <li><a href="#">Kennisbank</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 footer-col footer-col-2">
+                        <div class="footer-col-inner">
+                            <h5 class="title-primary h3">Support</h5>
+
+                            <ul class="footer-quick-links">
+                                <li><a href="#">Contact ons</a></li>
+                                <li><a href="#">Verzendbeleid</a></li>
+                                <li><a href="#">Restitutiebeleid</a></li>
+                                <li><a href="#">Affiliate programma</a></li>
+                                <li><a href="#">Retourneren</a></li>
+                                <li><a href="#">Disclaimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 footer-col footer-col-3">
+                        <div class="footer-col-inner">
+                            <h5 class="title-primary h3">Adres</h5>
+
+                            <ul class="location-links">
+                                <li><i class="fa fa-building"></i> Numsy</li>
+                                <li><i class="fa fa-home"></i> Strevelsweg 700</li>
+                                <li><i class="fa fa-map-marker"></i> 3083AS Rotterdam</li>
+                                <li>
+                                    <i class="fa fa-phone"></i>
+                                    <a href="tel:31651956654">+31 6 51956654</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope"></i>
+                                    <a href="mailto:info@numsy.nl">info@numsy.nl</a>
+                                </li>
+                                <li><i class="fa fa-briefcase"></i> KvK nummer: 75123193</li>
+                                <li>
+                                    <i class="fa fa-certificate"></i> BTW nummer: NL860151906B01
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-secondary">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-4">
+                            <p class="footer-copyright">2021 © Numsy</p>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="footer-social">
+                                <li>
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-youtube"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <form class="footer-search">
+                                <input type="search" placeholder="Zoeken.." name="s" />
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="./js/app.js"></script>
+
+</html>

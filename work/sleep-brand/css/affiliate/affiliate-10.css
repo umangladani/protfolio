@@ -1,0 +1,38 @@
+.get-start-section {
+    background: var(--green);
+    position: relative;
+    padding-top:50px;
+    padding-bottom: 50px;
+}
+
+.curvy-area.curvy-area-bottom.curve-area-60-sec {
+    top: 68px;
+}
+
+.get-start-section{
+    padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 767px)  {
+    .get-start-section {
+        padding-top:25px;
+        padding-bottom:25px;
+    }
+
+    .curvy-area.curvy-area-bottom.curve-area-60-sec {
+        top: 50px;
+    }
+}
+
+.get-start-section .curvy-area {
+    background: var(--green);
+}
+
+.get-start-title {
+    color: #fff;
+    font-size:36px
+}
+
+.get-start-title::after {
+    background: #fff;
+}

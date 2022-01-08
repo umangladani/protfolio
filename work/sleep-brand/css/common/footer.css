@@ -1,0 +1,127 @@
+#footer {
+  background: var(--darkGreen);
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#footer > .container {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.footer-quick-links,
+.location-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.6rem;
+}
+
+.footer-quick-links li + li,
+.location-links li + li {
+  margin-top: 4px;
+}
+
+.footer-quick-links a,
+.location-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.location-links li {
+  display: flex;
+  align-items: center;
+}
+
+.location-links i {
+  width: 20px;
+  margin-right: 1rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.footer-secondary {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem 0;
+}
+
+.footer-copyright {
+  margin: 0;
+}
+
+.footer-social {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.footer-social li + li {
+  margin-left: 1rem;
+}
+
+.footer-social a {
+  color: white;
+}
+
+.footer-search {
+  display: flex;
+  width: 100%;
+  max-width: 300px;
+}
+
+.footer-search input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid white;
+  background: transparent;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  color: white;
+  width: calc(100% - 57px);
+  padding: 10px;
+}
+
+.footer-search input::-webkit-input-placeholder {
+  color: white;
+}
+.footer-search input::-moz-placeholder {
+  color: white;
+}
+.footer-search input:-ms-input-placeholder {
+  color: white;
+}
+.footer-search input:-moz-placeholder {
+  color: white;
+}
+
+.footer-search button {
+  max-width: 57px;
+  padding: 10px 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  #footer > .container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .footer-col + .footer-col {
+    margin-top: 3rem;
+  }
+
+  .footer-secondary .col-md-4 + .col-md-4 {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,27 @@
+.book-section {
+  background: var(--green);
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+}
+
+.book-section img {
+  max-width: 300px;
+}
+
+@media screen and (max-width: 767px) {
+  .book-row {
+    text-align: center;
+  }
+
+  .book-row .col-md-7 {
+    order: 2;
+  }
+
+  .book-row .col-md-5 {
+    margin-bottom: 20px;
+  }
+
+  .book-row .col-md-5 img {
+    max-width: 200px;
+  }
+}

@@ -1,0 +1,278 @@
+
+
+@media (max-width: 1200px) {
+
+    nav ul li {
+        margin-left: 20px;
+    }
+  
+    .title.color-white.result-title {
+        padding: 48px 0;
+    }
+
+    #results:before {
+        height: 42%;
+    }
+
+}
+
+@media (max-width: 1025px){
+
+    .slider {
+        height: 650px;
+        background-size: 100%;
+    }
+
+    .about-me {
+        padding: 15px;
+    }
+
+    .main-title h1 {
+        font-size: 48px;
+        margin-bottom: 56px;
+    }
+
+    .about-title {
+        font-size: 36px;
+    }
+
+    .area-title {
+        font-size: 28px;
+    }
+
+    .title.color-white.result-title {
+        padding: 30px 0;
+    }
+    
+    nav ul li {
+        margin-left: 15px;
+    }
+
+    #results:before {
+        height: 36%;
+    }
+}
+
+
+@media (max-width: 991px) {
+
+
+    .slider {
+        height: 650px;
+        background-size: cover;
+    }
+
+    .conatct-icon {
+        padding: 20px 0;
+    }
+
+    .main-title h1{
+        font-size: 56px;
+        margin-bottom: 72px;
+    }
+
+    .desktop-nav ul li a {
+        font-size: 16px;
+    }
+
+    .about-me {
+        padding: 15px;
+    }
+
+
+    .about-title {
+        font-size: 32px;
+    }
+
+    .about-bg {
+        border-radius: 7px 0 7px 7px;
+    }
+
+    .results-box {
+        padding: 0px 0 75px 0;
+    }
+
+    nav ul li {
+        margin-left: 12px;
+    }
+
+    .footer-bg:before {
+        height: 60%;
+        top: 40.1%;
+        width: 100%;
+    }
+
+    .footer-bg {
+        padding: 50px 0;
+        position: relative;
+    }
+    
+
+    .footer-text {
+        margin: 25px 25px 25px 0;
+    }
+
+    .footer-contant {
+        margin-bottom: 65px;
+    }
+    
+    .blog-time {
+        padding: 15px 0;
+    }
+
+    #results:before {
+        height: 100%;
+    }
+
+
+    .footer-bg:before {
+        height: 58%;
+        top: 42.1%;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+
+    .slider {
+        background-size: cover;
+    }
+
+    .conatct-icon {
+        padding: 10px 0;
+    }
+
+    .main-title h1{
+        font-size: 48px;
+        margin-bottom: 56px;
+    }
+
+    .about-bg{
+        border-radius: 0 0 7px 7px;
+    }
+
+    .profile-photo {
+        display: flex;
+        padding: 0;
+        border-radius: 7px 7px 0 0 ;
+    }
+
+    .profile-photo img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .form-bg {
+        background: var(--white);
+        padding: 70px 0;
+        margin-bottom: 30px;
+        margin-top: -70px;
+        border-radius: 10px;
+        filter: drop-shadow(0 0 10.5px rgba(0,0,0,0.22));
+    }
+
+    .results-box {
+        padding: 0px 0 45px 0;
+    }
+
+    .title.color-white.result-title {
+        padding: 18px 0;
+        font-size: 28px;
+    }
+    
+    .input,.textarea {
+        width: calc(100% - 60px);
+        margin: 8px;
+    }
+
+    .footer-contant {
+        margin-bottom: 65px;
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .main-title h1 {
+        font-size: 48px;
+        margin-bottom: 44px;
+    }
+
+    .conatct-icon {
+        padding: 5px 0;
+    }
+
+    .toggle-icon{
+        margin-right: 30px;
+    }
+      
+    .profile-photo img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #results {
+        background: var(--blue);
+    }
+
+    .form-title {
+        font-size: 24px;
+    }
+
+    .tel-footer a, .tel-footer {
+        font-size: 21px;
+    }
+
+    .toggle-head {
+        margin-bottom: 25px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .slider-btn {
+        margin-top: 48px;
+    }
+
+    .slider-btn a {
+        padding: 13px 14px;
+        font-size: 16px;
+    }
+    
+    .main-title h1 {
+        font-size: 36px;
+        margin-bottom: 51px;
+    }
+
+    .toggle-head .brand {
+        width: 75%;
+    }
+
+    .active-toggle .active-toggle-icon {
+        margin-right: 30px;
+    }
+
+    .toggle-head {
+        margin-bottom: 15px;
+    }
+
+}
+
+@media (max-width: 396px) {
+  
+    .toggle-icon.active-toggle-icon {
+        top: -90px;
+    }
+
+    
+
+}
+
+@media (max-width: 320px) {
+  
+
+}

@@ -1,0 +1,18 @@
+.inner-page .hero-title {
+  font-size: 6rem;
+}
+
+.inner-page .hero-copy {
+  width: 100%;
+}
+
+.inner-page .hero-subtitle {
+  display: block !important;
+}
+
+@media screen and (max-width: 991px) {
+  .inner-page .hero-copy h1,
+  .inner-page .hero-copy .text-big {
+    text-align: center !important;
+  }
+}
